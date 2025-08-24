@@ -1,0 +1,14 @@
+{
+	"files.associations": {
+		"wrangler.json": "jsonc"
+	},
+	"workbench.colorCustomizations": {
+		"editorRuler.foreground": "#333",
+		"diffEditor.removedTextBackground": "#FF00000f",
+		"diffEditor.insertedTextBackground": "#00ff000a",
+		"editor.selectionHighlightBorder": "#777",
+		"activityBar.background": "#5A121D",
+		"titleBar.activeBackground": "#7E1929",
+		"titleBar.activeForeground": "#FEFBFB"
+	}
+}
