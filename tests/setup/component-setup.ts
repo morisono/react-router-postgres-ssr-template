@@ -12,11 +12,10 @@ vi.mock('react-router', () => ({
   useNavigate: () => vi.fn(),
   useLocation: () => ({ pathname: '/', search: '', hash: '' }),
   useParams: () => ({}),
-  Link: ({ children, to, ...props }: any) => (
-    <a href={to} {...props}>
-      {children}
-    </a>
-  ),
+  Link: ({ children, to, ...props }: any) => {
+    const React = require('react');
+    return React.createElement('a', { href: to, ...props }, children);
+  },
 }));
 
 // Mock Cloudflare Workers APIs

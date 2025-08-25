@@ -27,13 +27,6 @@
 			"entrypoint": "BooksService"
 		}
 	],
-	"d1_databases": [
-		{
-		"binding": "demo_dev_123",
-		"database_id": "demo_dev_123",
-		"migrations_dir": "./db/orm/migrations"
-		}
-	],
 	"placement": {
 		"mode": "smart"
 	},
@@ -41,7 +34,16 @@
 		"enabled": true
 	},
 	"env": {
-		"test": {}
+		"test": {},
+		"production": {
+			"hyperdrive": [
+				{
+					"binding": "HYPERDRIVE",
+					"id": "YOUR_PRODUCTION_HYPERDRIVE_ID",
+					"localConnectionString": "postgresql://production:password@localhost:5432/production_database"
+				}
+			]
+		}
 	},
 	/**
 	 * Smart Placement

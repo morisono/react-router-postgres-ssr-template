@@ -4,9 +4,9 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
-    setupFiles: ['./setup/unit-setup.ts'],
-    include: ['unit/**/*.test.{ts,tsx}', 'app/**/*.test.{ts,tsx}'],
-    exclude: ['integration/**', 'e2e/**', 'load/**'],
+    setupFiles: ['./tests/setup/unit-setup.ts'],
+    include: ['tests/unit/**/*.test.{ts,tsx}', 'app/**/*.test.{ts,tsx}'],
+    exclude: ['tests/integration/**', 'tests/e2e/**', 'tests/load/**'],
     coverage: {
       reporter: ['text', 'json', 'html'],
       exclude: [
@@ -27,5 +27,11 @@ export default defineConfig({
     alias: {
       '~': './app',
     }
-  }
+  },
+  esbuild: {
+    jsx: 'automatic',
+  },
+  define: {
+    global: 'globalThis',
+  },
 });
