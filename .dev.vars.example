@@ -20,7 +20,7 @@ CF_D1_TOKEN=
 # Production: Use a dedicated user with limited permissions
 DB_HOST=localhost
 DB_PORT=5432
-DB_NAME=demo_dev_123
+DB_NAME=demo_dev_123   # Also set it in wrangler config file (wrangler.jsonc)
 DB_URL=postgresql://user:password@localhost:5432/demo_dev_123
 
 # Audit Configuration
