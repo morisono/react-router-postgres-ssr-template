@@ -1,5 +1,6 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
+import defineWorkersConfig from '@cloudflare/vitest-pool-workers/config';
 
 export default defineWorkersConfig({
   test: {
