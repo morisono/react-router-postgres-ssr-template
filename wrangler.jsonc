@@ -30,7 +30,8 @@
 	"d1_databases": [
 		{
 		"binding": "demo_dev_123",       // <--- the name you use in CLI
-		"database_id": "demo_dev_123"  // <--- the actual Cloudflare D1 database name
+		"database_id": "demo_dev_123",  // <--- the actual Cloudflare D1 database name
+		"migrations_dir": "./db/orm/migrations"
 		}
 	],
 	"placement": {
