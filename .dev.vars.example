@@ -3,17 +3,16 @@ PROJECT_ID=
 BRANCH_ID=
 PARENT_BRANCH=
 COMUTES_PRIMARY=
+CI=true
 
 # Hosting
 CF_ACCOUNT_ID= # Show URL: ID:xxx => https://dash.cloudflare.com/xxx
 CF_API_TOKEN= # Cloudflare (User) API Token
 CF_USER_API_TOKEN= # Cloudflare dashboard → My Profile → API Tokens: https://dash.cloudflare.com/xxx/api-tokens
-CF_GLOBAL_API_KEY=
-CF_ORIGINAL_CA_KEY=
+
 
 CF_KV_NAMESPACE= # npx wrangler kv namespace list
 CF_DATABASE_ID= # npx wrangler d1 list
-CF_D1_TOKEN=
 
 # Database Configuration
 # Development: Use postgres superuser or create a user with proper permissions
