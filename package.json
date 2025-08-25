@@ -11,7 +11,10 @@
       "Workers Static Assets",
       "Smart Placement"
     ],
-    "categories": ["starter", "storage"],
+    "categories": [
+      "starter",
+      "storage"
+    ],
     "docs_url": "https://developers.cloudflare.com/workers/frameworks/framework-guides/react-router/",
     "icon_urls": [],
     "preview_image_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/8db618d7-0c0e-4ab5-f6f5-721e45b80c00/public",
@@ -30,6 +33,7 @@
     "@cloudflare/vitest-pool-workers": "^0.5.0",
     "@playwright/test": "^1.48.0",
     "@react-router/dev": "7.6.3",
+    "@tailwindcss/postcss": "^4.1.12",
     "@testing-library/jest-dom": "^6.6.0",
     "@testing-library/react": "^16.1.0",
     "@testing-library/user-event": "^14.5.2",
