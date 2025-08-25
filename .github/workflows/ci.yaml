@@ -12,19 +12,19 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'pnpm'
+          cache: 'npm'
+
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: npm ci
+
       - name: Run unit tests
-        run: pnpm test
+        run: npm test
+
   deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 5
@@ -34,17 +34,16 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: 'pnpm'
+          cache: 'npm'
+
       - name: Install dependencies
-        run: pnpm i --frozen-lockfile
+        run: npm ci
+
       - name: Build & Deploy Worker
         id: deploy
         uses: cloudflare/wrangler-action@v3
@@ -55,6 +54,7 @@ jobs:
             HYPERDRIVE
         env:
           HYPERDRIVE: ${{ secrets.HYPERDRIVE }}
+
       - name: Print deployment URL
         env:
           DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
