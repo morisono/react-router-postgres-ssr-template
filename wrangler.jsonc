@@ -27,6 +27,12 @@
 			"entrypoint": "BooksService"
 		}
 	],
+	"d1_databases": [
+		{
+		"binding": "demo_dev_123",       // <--- the name you use in CLI
+		"database_name": "demo_dev_123"  // <--- the actual Cloudflare D1 database name
+		}
+	],
 	"placement": {
 		"mode": "smart"
 	},
