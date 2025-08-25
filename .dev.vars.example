@@ -17,10 +17,10 @@ CLOUDFLARE_DATABASE_ID= # npx wrangler d1 list
 # Database Configuration
 # Development: Use postgres superuser or create a user with proper permissions
 # Production: Use a dedicated user with limited permissions
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=demo_dev_123   # Also set it in wrangler config file (wrangler.jsonc)
-DB_URL=postgresql://user:password@localhost:5432/demo_dev_123
+DATABASE_HOST=localhost
+DATABASE_PORT=5432
+DATABASE_NAME=demo_dev_123   # Also set it in wrangler config file (wrangler.jsonc)
+DATABASE_URL=postgresql://user:password@localhost:5432/demo_dev_123
 
 # Audit Configuration
 AUDIT_BATCH_SIZE=100

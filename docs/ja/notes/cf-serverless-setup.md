@@ -27,7 +27,7 @@ cp .env.example .env  # 必要に応じて編集
 
 source .env                                   # Use set -x XXX for fish
 
-npx wrangler secret put DB_URL
+npx wrangler secret put DATABASE_URL
 npx wrangler secret put CLOUDFLARE_API_TOKEN
 npx wrangler secret list
 
@@ -153,8 +153,8 @@ CI/CD:
 ## 4. D1 / HyperDrive (Postgres)
 
 ```sh
-npx wrangler hyperdrive create $DB_NAME --connection-string="$DB_URL"
-# or npx wrangler d1 create  $DB_NAME --connection-string="$DB_URL"
+npx wrangler hyperdrive create $DATABASE_NAME --connection-string="$DATABASE_URL"
+# or npx wrangler d1 create  $DATABASE_NAME --connection-string="$DATABASE_URL"
 
 npx wrangler hyperdrive list
 # npx wrangler d1 list
@@ -165,8 +165,8 @@ npx wrangler hyperdrive list
 ```toml
 [[d1_databases]]
 binding = "DB"
-DB_name = "mydb"
-DB_id = "xxxx"
+DATABASE_name = "mydb"
+DATABASE_id = "xxxx"
 ```
 
 ### Neon Postgres
@@ -175,7 +175,7 @@ DB_id = "xxxx"
 * HyperDrive経由接続：
 
 ```sh
-npx wrangler hyperdrive create my-hyperdrive-config --connection-string="$DB_URL"
+npx wrangler hyperdrive create my-hyperdrive-config --connection-string="$DATABASE_URL"
 ```
 
 `wrangler.jsonc`:
