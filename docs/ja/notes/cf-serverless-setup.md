@@ -22,7 +22,7 @@ npx wrangler d1 list
 ## 2. 環境設定
 
 ```sh
-cp .dev.vars.example .dev.vars
+cp .dev.vars.example .dev.vars # 必要に応じて編集
 cp .env.example .env  # 必要に応じて編集
 
 source .env                                   # Use set -x XXX for fish
@@ -274,7 +274,7 @@ npm run deploy
 ```sh
 gh secret set CLOUDFLARE_ACCOUNT_ID
 gh secret set CLOUDFLARE_API_TOKEN
-gh secret set MY_VARIABLE
+gh secret set BOOKS_SERVICE
 ```
 
 - Cloudflare Pages/Workers に 組み込みデプロイする場合は、GitHub Actions などの外部 CI を挟まず、Cloudflare の Deploy Hook
