@@ -134,6 +134,7 @@ jobs:
         run: |
           echo "HYPERDRIVE=test_hyperdrive_connection" >> .dev.vars.test
           echo "NODE_ENV=test" >> .dev.vars.test
+          echo "CI=true" >> .dev.vars.test
 
       - name: Run unit tests - ${{ matrix.test-group }}
         run: |
