@@ -79,6 +79,8 @@
     "test:all": "npm run test:unit && npm run test:components",
     "test:unit": "vitest run --config tests/vitest.config.unit.ts",
     "test:workers": "vitest run --config tests/vitest.config.workers.ts",
+    "test:workers:ci": "vitest run --config tests/vitest.config.workers.ts --reporter=json --reporter=default",
+    "test:workers:coverage": "echo 'Coverage is not supported for worker tests due to Cloudflare Workers runtime limitations'",
     "test:components": "vitest run --config tests/vitest.config.components.ts",
     "test:integration": "vitest run --config tests/vitest.config.integration.ts",
     "test:e2e": "playwright test --config=tests/playwright.config.ts",

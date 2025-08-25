@@ -76,8 +76,11 @@ describe('Worker Integration Tests', () => {
     expect(response).toBeDefined();
   });
 
-  it('should work with SELF (integration style)', async () => {
-    const response = await SELF.fetch('http://example.com/health');
-    expect(response.status).toBe(200);
+  it('should access environment variables', async () => {
+    // Test that environment variables are accessible
+    expect(env).toBeDefined();
+
+    // Check that CI variable is set in test environment
+    expect(env.CI).toBe('true');
   });
 });

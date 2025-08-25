@@ -5,7 +5,7 @@
 {
 	"$schema": "./node_modules/wrangler/config-schema.json",
 	"name": "react-router-postgres-ssr-template",
-	"compatibility_date": "2025-04-01",
+	"compatibility_date": "2024-12-30",
 	"main": "./api/index.js",
 	"compatibility_flags": [
 		"nodejs_compat"
@@ -34,7 +34,19 @@
 		"enabled": true
 	},
 	"env": {
-		"test": {},
+		"test": {
+			"assets": {
+				"directory": "./public"
+			},
+			"hyperdrive": [
+				{
+					"binding": "HYPERDRIVE",
+					"id": "test-hyperdrive-id",
+					"localConnectionString": "postgresql://test:password@localhost:5432/test_database"
+				}
+			],
+			"services": []
+		},
 		"production": {
 			"hyperdrive": [
 				{
