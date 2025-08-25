@@ -122,6 +122,7 @@ npm install drizzle-orm drizzle-kit better-sqlite3
 - Migration:
   ```
   npx drizzle-kit generate --config=./db/orm/drizzle.config.ts
+  npx drizzle-kit migrate --config=./db/orm/drizzle.config.ts
   ```
 
 - Apply:
