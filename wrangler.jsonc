@@ -40,6 +40,9 @@
 	"observability": {
 		"enabled": true
 	},
+	"env": {
+		"test": {}
+	},
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
