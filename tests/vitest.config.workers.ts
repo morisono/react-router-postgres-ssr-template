@@ -1,6 +1,4 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-import defineWorkersConfig from '@cloudflare/vitest-pool-workers/config';
+import { defineWorkersConfig } from '@cloudflare/vitest-pool-workers/config';
 
 export default defineWorkersConfig({
   test: {
@@ -9,7 +7,7 @@ export default defineWorkersConfig({
     poolOptions: {
       workers: {
         wrangler: {
-          configPath: path.resolve(fileURLToPath(import.meta.url), '../../wrangler.jsonc'),
+          configPath: '../wrangler.jsonc',
           environment: 'test',
         },
       },
