@@ -94,9 +94,10 @@
     "format:check": "prettier --check .",
     "type-check": "tsc --noEmit",
     "analyze:bundle": "npm run build && npx bundlesize",
-    "db:generate": "-kit generate",
+    "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
-    "db:migrate:test": "cross-var drizzle-kit migrate --config=db/drizzle.config.test.ts",
+    "db:generate:test": "drizzle-kit generate --config=db/drizzle.config.test.ts",
+    "db:migrate:test": "npm run -s db:generate:test && cross-var drizzle-kit migrate --config=db/drizzle.config.test.ts",
     "db:seed:test": "node scripts/seed-test-db.js",
     "prepare": "husky install || true"
   },
