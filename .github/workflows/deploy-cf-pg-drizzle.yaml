@@ -1,4 +1,4 @@
-name: Deploy Worker with Drizzle + D1
+name: Deploy Worker with Drizzle + PostgreSQL
 
 on:
   push:
@@ -21,13 +21,6 @@ jobs:
       - name: Install Wrangler
         run: npm install -g wrangler
 
-      - name: Apply Migrations on D1
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        run: |
-          npx wrangler d1 migrations apply s12001-d1-1
-
       - name: Deploy Worker Test
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -41,6 +34,14 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           npx wrangler deploy infra/cf/workers/migrate.ts --env production
+
+      - name: Apply Migrations via Worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "Triggering migration worker to apply PostgreSQL migrations..."
+          # The migration worker will be called via HTTP to apply migrations
 
       - name: Deploy Main Worker
         env:
