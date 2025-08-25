@@ -275,6 +275,7 @@ npm run deploy
 gh secret set CLOUDFLARE_ACCOUNT_ID
 gh secret set CLOUDFLARE_API_TOKEN
 gh secret set BOOKS_SERVICE
+gh secret set DATABASE_URL
 ```
 
 - Cloudflare Pages/Workers に 組み込みデプロイする場合は、GitHub Actions などの外部 CI を挟まず、Cloudflare の Deploy Hook
