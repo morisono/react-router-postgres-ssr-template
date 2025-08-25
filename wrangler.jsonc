@@ -17,7 +17,7 @@
 	  {
 	    "binding": "HYPERDRIVE",
 	    "id": "YOUR_HYPERDRIVE_ID",
-	    "localConnectionString": "postgresql://myuser:mypassword@localhost:5432/mydatabase"
+	    "localConnectionString": "postgresql://user:password@localhost:5432/database"
 	  }
 	],
 	"services": [
