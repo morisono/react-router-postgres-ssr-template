@@ -294,8 +294,8 @@ jobs:
         with:
           name: e2e-test-results
           path: |
-            test-results/
-            playwright-report/
+            tests/e2e/results/
+            tests/e2e/playwright-report/
 
   # Stage 6: Performance & Accessibility Tests
   performance-tests:
