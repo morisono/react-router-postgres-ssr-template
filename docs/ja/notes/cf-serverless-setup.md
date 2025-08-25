@@ -85,7 +85,12 @@ npx wrangler d1 create s10111-d1-1
 
 Table 作成:
 ```
-npx wrangler d1 execute s12001-d1-1 --command "CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT);"
+# Test SQLite table from commandline
+QUERY="CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT);"
+npx wrangler d1 execute s12001-d1-1 --command $QUERY
+
+# execute file for PostgreSQL 
+# npx wrangler d1 execute MY_DB --file db/pg/init.sql
 ```
 
 **Drizzle連携:**
