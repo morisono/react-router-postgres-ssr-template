@@ -1,5 +1,52 @@
+# Project
+PROJECT_ID=
+BRANCH_ID=
+PARENT_BRANCH=
+COMUTES_PRIMARY=
 
-STRIPE_SECRET_KEY=sk_test_......
-STRIPE_PRICE_ID_ONE_TIME_PAYMENT=price_1RJJwjR1b4cWtS0UCIDTSU3V
-STRIPE_PRICE_ID_SUBSCRIPTION=price_1RJJwjR1bGyW9S0UCIDTSU3V
-STRIPE_PRICE_ID_USAGE_BASED_SUBSCRIPTION=price_1RJdGWR1bGyW9S0UucbYBFBZ⏎     
+# Hosting
+CF_ACCOUNT_ID= # Show URL: ID:xxx => https://dash.cloudflare.com/xxx
+CF_API_TOKEN= # Cloudflare (User) API Token
+CF_USER_API_TOKEN= # Cloudflare dashboard → My Profile → API Tokens: https://dash.cloudflare.com/xxx/api-tokens
+CF_GLOBAL_API_KEY=
+CF_ORIGINAL_CA_KEY=
+
+CF_KV_NAMESPACE= # npx wrangler kv namespace list
+CF_DATABASE_ID= # npx wrangler d1 list
+CF_D1_TOKEN=
+
+# Database Configuration
+# Development: Use postgres superuser or create a user with proper permissions
+# Production: Use a dedicated user with limited permissions
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=demo_dev_123
+DB_URL=postgresql://user:password@localhost:5432/demo_dev_123
+
+# Audit Configuration
+AUDIT_BATCH_SIZE=100
+AUDIT_FLUSH_INTERVAL=5000
+AUDIT_RETENTION_DAYS=2555
+
+# Neon DB
+JWKS_URL=https://api.stack-auth.com/api/v1/projects/$project_id/.well-known/jwks.json
+DATA_API=https://xxxxxxxxxxx.dpl.myneon.app
+
+# HyperDrive
+HYPERDRIVE=
+BOOKS_SERVICE=
+
+# Frontend
+VITE_PUBLIC_URL=http://localhost:3000
+VITE_PUBLIC_ANALYTICS_ID=
+
+# Neon Auth environment variables for React (Vite)
+VITE_STACK_PROJECT_ID=$project_id
+VITE_STACK_PUBLISHABLE_CLIENT_KEY=
+STACK_SECRET_SERVER_KEY=
+
+# Payment Configuration
+STRIPE_SECRET_KEY=
+STRIPE_PRICE_ID_ONE_TIME_PAYMENT=
+STRIPE_PRICE_ID_SUBSCRIPTION=
+STRIPE_PRICE_ID_USAGE_BASED_SUBSCRIPTION=
