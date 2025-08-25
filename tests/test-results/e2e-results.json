@@ -1,0 +1,1807 @@
+{
+  "config": {
+    "configFile": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/tests/playwright.config.ts",
+    "rootDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/e2e-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/e2e-results.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Mobile Chrome",
+        "name": "Mobile Chrome",
+        "testDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "Mobile Safari",
+        "name": "Mobile Safari",
+        "testDir": "/home/sana/ghq/github.com/morisono/cloudflare/react-router-postgres-ssr-template/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 1,
+    "webServer": {
+      "command": "npm run dev",
+      "url": "http://localhost:3000",
+      "reuseExistingServer": true,
+      "timeout": 120000
+    }
+  },
+  "suites": [
+    {
+      "title": "books-app.spec.ts",
+      "file": "books-app.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Books Application E2E Tests",
+          "file": "books-app.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [],
+          "suites": [
+            {
+              "title": "Homepage",
+              "file": "books-app.spec.ts",
+              "line": 9,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should display the books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-03c6da11977543e6255a",
+                  "file": "books-app.spec.ts",
+                  "line": 10,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate to book details",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-191f89ad3fce86c51507",
+                  "file": "books-app.spec.ts",
+                  "line": 21,
+                  "column": 5
+                },
+                {
+                  "title": "should filter books by genre",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-0dc1c72ecf23a9b48e51",
+                  "file": "books-app.spec.ts",
+                  "line": 35,
+                  "column": 5
+                },
+                {
+                  "title": "should display the books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-049e5a814bc1960dadd0",
+                  "file": "books-app.spec.ts",
+                  "line": 10,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate to book details",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-4b491de21e9d1a42dede",
+                  "file": "books-app.spec.ts",
+                  "line": 21,
+                  "column": 5
+                },
+                {
+                  "title": "should filter books by genre",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-c3b763b5a7d9aa34eaee",
+                  "file": "books-app.spec.ts",
+                  "line": 35,
+                  "column": 5
+                },
+                {
+                  "title": "should display the books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-733bc9d82540714f17ba",
+                  "file": "books-app.spec.ts",
+                  "line": 10,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate to book details",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-ceec0292632ffad3a1a8",
+                  "file": "books-app.spec.ts",
+                  "line": 21,
+                  "column": 5
+                },
+                {
+                  "title": "should filter books by genre",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-50cb6381e28f4f60cc4c",
+                  "file": "books-app.spec.ts",
+                  "line": 35,
+                  "column": 5
+                },
+                {
+                  "title": "should display the books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-482c112587e1c1dee2b5",
+                  "file": "books-app.spec.ts",
+                  "line": 10,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate to book details",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-f56e83c7adccf8b76489",
+                  "file": "books-app.spec.ts",
+                  "line": 21,
+                  "column": 5
+                },
+                {
+                  "title": "should filter books by genre",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-c73afab6e3cb153ae063",
+                  "file": "books-app.spec.ts",
+                  "line": 35,
+                  "column": 5
+                },
+                {
+                  "title": "should display the books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-4357320451c5a67cc77c",
+                  "file": "books-app.spec.ts",
+                  "line": 10,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate to book details",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-ad1348d172cc2c051585",
+                  "file": "books-app.spec.ts",
+                  "line": 21,
+                  "column": 5
+                },
+                {
+                  "title": "should filter books by genre",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-9411c029176bc19b063e",
+                  "file": "books-app.spec.ts",
+                  "line": 35,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "title": "Book Details Page",
+              "file": "books-app.spec.ts",
+              "line": 50,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should show complete book information",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-40f7a4273b5df609eaf1",
+                  "file": "books-app.spec.ts",
+                  "line": 51,
+                  "column": 5
+                },
+                {
+                  "title": "should show breadcrumb navigation",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-624887768222b872e5f5",
+                  "file": "books-app.spec.ts",
+                  "line": 64,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate back to books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-9846fde965b774b1dd32",
+                  "file": "books-app.spec.ts",
+                  "line": 73,
+                  "column": 5
+                },
+                {
+                  "title": "should show complete book information",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-cdb372739a9b3c2b3441",
+                  "file": "books-app.spec.ts",
+                  "line": 51,
+                  "column": 5
+                },
+                {
+                  "title": "should show breadcrumb navigation",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-1fc39e3fd86a9ef7459f",
+                  "file": "books-app.spec.ts",
+                  "line": 64,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate back to books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-2b1125b9fe4fe52225bc",
+                  "file": "books-app.spec.ts",
+                  "line": 73,
+                  "column": 5
+                },
+                {
+                  "title": "should show complete book information",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-7381e3b0ea9aef0885e8",
+                  "file": "books-app.spec.ts",
+                  "line": 51,
+                  "column": 5
+                },
+                {
+                  "title": "should show breadcrumb navigation",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-42f52b1287dd4b3695c5",
+                  "file": "books-app.spec.ts",
+                  "line": 64,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate back to books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-95da18bacb7984385237",
+                  "file": "books-app.spec.ts",
+                  "line": 73,
+                  "column": 5
+                },
+                {
+                  "title": "should show complete book information",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-f8f413ea084ec1787b76",
+                  "file": "books-app.spec.ts",
+                  "line": 51,
+                  "column": 5
+                },
+                {
+                  "title": "should show breadcrumb navigation",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-16040108d4d3d8b9dd78",
+                  "file": "books-app.spec.ts",
+                  "line": 64,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate back to books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-9fe798711b9dba0cb88d",
+                  "file": "books-app.spec.ts",
+                  "line": 73,
+                  "column": 5
+                },
+                {
+                  "title": "should show complete book information",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-1651b3485a2238185a31",
+                  "file": "books-app.spec.ts",
+                  "line": 51,
+                  "column": 5
+                },
+                {
+                  "title": "should show breadcrumb navigation",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-54820950ffdb3650d394",
+                  "file": "books-app.spec.ts",
+                  "line": 64,
+                  "column": 5
+                },
+                {
+                  "title": "should navigate back to books list",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-184d26a7f43e7de3cc36",
+                  "file": "books-app.spec.ts",
+                  "line": 73,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "title": "Responsive Design",
+              "file": "books-app.spec.ts",
+              "line": 84,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should work on mobile devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-b00bfe18d60242726f8a",
+                  "file": "books-app.spec.ts",
+                  "line": 85,
+                  "column": 5
+                },
+                {
+                  "title": "should work on tablet devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-05d64eb4b7593aa8ce0c",
+                  "file": "books-app.spec.ts",
+                  "line": 103,
+                  "column": 5
+                },
+                {
+                  "title": "should work on mobile devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-8380f9d5a52b2e34b68a",
+                  "file": "books-app.spec.ts",
+                  "line": 85,
+                  "column": 5
+                },
+                {
+                  "title": "should work on tablet devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-17c568aad0646333a77a",
+                  "file": "books-app.spec.ts",
+                  "line": 103,
+                  "column": 5
+                },
+                {
+                  "title": "should work on mobile devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-637c91e409251f819bad",
+                  "file": "books-app.spec.ts",
+                  "line": 85,
+                  "column": 5
+                },
+                {
+                  "title": "should work on tablet devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-d7fef3546c71030b4994",
+                  "file": "books-app.spec.ts",
+                  "line": 103,
+                  "column": 5
+                },
+                {
+                  "title": "should work on mobile devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-0ab984cbfba01608b764",
+                  "file": "books-app.spec.ts",
+                  "line": 85,
+                  "column": 5
+                },
+                {
+                  "title": "should work on tablet devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-e54690c3e905f09393d5",
+                  "file": "books-app.spec.ts",
+                  "line": 103,
+                  "column": 5
+                },
+                {
+                  "title": "should work on mobile devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-cf742b8f280c623555ee",
+                  "file": "books-app.spec.ts",
+                  "line": 85,
+                  "column": 5
+                },
+                {
+                  "title": "should work on tablet devices",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-4ec397fe925c23059700",
+                  "file": "books-app.spec.ts",
+                  "line": 103,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "title": "Performance",
+              "file": "books-app.spec.ts",
+              "line": 116,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should load within acceptable time",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-60ecb8ac6822ffb6ab89",
+                  "file": "books-app.spec.ts",
+                  "line": 117,
+                  "column": 5
+                },
+                {
+                  "title": "should have good Core Web Vitals",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-06a0c0cbfdb856484ad1",
+                  "file": "books-app.spec.ts",
+                  "line": 129,
+                  "column": 5
+                },
+                {
+                  "title": "should load within acceptable time",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-75eee0163f8082f8a3ec",
+                  "file": "books-app.spec.ts",
+                  "line": 117,
+                  "column": 5
+                },
+                {
+                  "title": "should have good Core Web Vitals",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-eebd1d2bd5103b900ea6",
+                  "file": "books-app.spec.ts",
+                  "line": 129,
+                  "column": 5
+                },
+                {
+                  "title": "should load within acceptable time",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-000d39e1d55d43550097",
+                  "file": "books-app.spec.ts",
+                  "line": 117,
+                  "column": 5
+                },
+                {
+                  "title": "should have good Core Web Vitals",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-1cc96cb0e457fea02b35",
+                  "file": "books-app.spec.ts",
+                  "line": 129,
+                  "column": 5
+                },
+                {
+                  "title": "should load within acceptable time",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-37e5baa2abda56cbe2d0",
+                  "file": "books-app.spec.ts",
+                  "line": 117,
+                  "column": 5
+                },
+                {
+                  "title": "should have good Core Web Vitals",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-49813a7562dd4d8f9a4d",
+                  "file": "books-app.spec.ts",
+                  "line": 129,
+                  "column": 5
+                },
+                {
+                  "title": "should load within acceptable time",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-42efb0ae4c3a558c4a47",
+                  "file": "books-app.spec.ts",
+                  "line": 117,
+                  "column": 5
+                },
+                {
+                  "title": "should have good Core Web Vitals",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-8f46bf14163a68d86748",
+                  "file": "books-app.spec.ts",
+                  "line": 129,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "title": "Accessibility",
+              "file": "books-app.spec.ts",
+              "line": 150,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should have proper heading hierarchy",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-a1ab9231ffd0cd0d55eb",
+                  "file": "books-app.spec.ts",
+                  "line": 151,
+                  "column": 5
+                },
+                {
+                  "title": "should be keyboard navigable",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-68310de8cfac621e17e3",
+                  "file": "books-app.spec.ts",
+                  "line": 162,
+                  "column": 5
+                },
+                {
+                  "title": "should have alt text for images",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-b723a756804a45e455f3",
+                  "file": "books-app.spec.ts",
+                  "line": 174,
+                  "column": 5
+                },
+                {
+                  "title": "should have proper heading hierarchy",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-48e37f824b79f1673bc8",
+                  "file": "books-app.spec.ts",
+                  "line": 151,
+                  "column": 5
+                },
+                {
+                  "title": "should be keyboard navigable",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-901ec274bd820496874d",
+                  "file": "books-app.spec.ts",
+                  "line": 162,
+                  "column": 5
+                },
+                {
+                  "title": "should have alt text for images",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-ae7628d28bafe35f57a0",
+                  "file": "books-app.spec.ts",
+                  "line": 174,
+                  "column": 5
+                },
+                {
+                  "title": "should have proper heading hierarchy",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-d9411c6c8b82765f75ff",
+                  "file": "books-app.spec.ts",
+                  "line": 151,
+                  "column": 5
+                },
+                {
+                  "title": "should be keyboard navigable",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-0f9b52050463b6ca0a58",
+                  "file": "books-app.spec.ts",
+                  "line": 162,
+                  "column": 5
+                },
+                {
+                  "title": "should have alt text for images",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-5ed2470b2f0a8fd2a86a",
+                  "file": "books-app.spec.ts",
+                  "line": 174,
+                  "column": 5
+                },
+                {
+                  "title": "should have proper heading hierarchy",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-2e72ec7def29506a8c4f",
+                  "file": "books-app.spec.ts",
+                  "line": 151,
+                  "column": 5
+                },
+                {
+                  "title": "should be keyboard navigable",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-5746658f71b8f054dba0",
+                  "file": "books-app.spec.ts",
+                  "line": 162,
+                  "column": 5
+                },
+                {
+                  "title": "should have alt text for images",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-1c406b4c55bab9c779d6",
+                  "file": "books-app.spec.ts",
+                  "line": 174,
+                  "column": 5
+                },
+                {
+                  "title": "should have proper heading hierarchy",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-78083f2a3d75c98d905f",
+                  "file": "books-app.spec.ts",
+                  "line": 151,
+                  "column": 5
+                },
+                {
+                  "title": "should be keyboard navigable",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-e6b3873ad6e6c393c716",
+                  "file": "books-app.spec.ts",
+                  "line": 162,
+                  "column": 5
+                },
+                {
+                  "title": "should have alt text for images",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-cc4c29bd63ed012eb196",
+                  "file": "books-app.spec.ts",
+                  "line": 174,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "title": "Error Handling",
+              "file": "books-app.spec.ts",
+              "line": 190,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should handle 404 pages gracefully",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-35a24068b25a2ba5f529",
+                  "file": "books-app.spec.ts",
+                  "line": 191,
+                  "column": 5
+                },
+                {
+                  "title": "should handle network errors",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-e49794825c2c2b75797e",
+                  "file": "books-app.spec.ts",
+                  "line": 198,
+                  "column": 5
+                },
+                {
+                  "title": "should handle 404 pages gracefully",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-9333d65be953b577bf12",
+                  "file": "books-app.spec.ts",
+                  "line": 191,
+                  "column": 5
+                },
+                {
+                  "title": "should handle network errors",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-d65d380bef674d90d019",
+                  "file": "books-app.spec.ts",
+                  "line": 198,
+                  "column": 5
+                },
+                {
+                  "title": "should handle 404 pages gracefully",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-7c4ad5ce2006b18f176e",
+                  "file": "books-app.spec.ts",
+                  "line": 191,
+                  "column": 5
+                },
+                {
+                  "title": "should handle network errors",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-a97d0c73d4d4d5aeb619",
+                  "file": "books-app.spec.ts",
+                  "line": 198,
+                  "column": 5
+                },
+                {
+                  "title": "should handle 404 pages gracefully",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-ae5ac7e6d88970120ebc",
+                  "file": "books-app.spec.ts",
+                  "line": 191,
+                  "column": 5
+                },
+                {
+                  "title": "should handle network errors",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-e26c46fff0c79feee7ff",
+                  "file": "books-app.spec.ts",
+                  "line": 198,
+                  "column": 5
+                },
+                {
+                  "title": "should handle 404 pages gracefully",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-705b9690359d44ea06d3",
+                  "file": "books-app.spec.ts",
+                  "line": 191,
+                  "column": 5
+                },
+                {
+                  "title": "should handle network errors",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-5327e7e29f91e958c81d",
+                  "file": "books-app.spec.ts",
+                  "line": 198,
+                  "column": 5
+                }
+              ]
+            },
+            {
+              "title": "Search Functionality",
+              "file": "books-app.spec.ts",
+              "line": 212,
+              "column": 8,
+              "specs": [
+                {
+                  "title": "should search books by title",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-f725f6508efde8b73766",
+                  "file": "books-app.spec.ts",
+                  "line": 213,
+                  "column": 5
+                },
+                {
+                  "title": "should search books by title",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "firefox",
+                      "projectName": "firefox",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-08b2d97cb73a37d4da96",
+                  "file": "books-app.spec.ts",
+                  "line": 213,
+                  "column": 5
+                },
+                {
+                  "title": "should search books by title",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "webkit",
+                      "projectName": "webkit",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-3914463fc0e5a2b9411f",
+                  "file": "books-app.spec.ts",
+                  "line": 213,
+                  "column": 5
+                },
+                {
+                  "title": "should search books by title",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Chrome",
+                      "projectName": "Mobile Chrome",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-3786488c80e5b04bb716",
+                  "file": "books-app.spec.ts",
+                  "line": 213,
+                  "column": 5
+                },
+                {
+                  "title": "should search books by title",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "1782ccdf07c5bad80035-6015293200422c6b3d89",
+                  "file": "books-app.spec.ts",
+                  "line": 213,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-25T08:48:30.765Z",
+    "duration": 219.10199999999986,
+    "expected": 0,
+    "skipped": 80,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
