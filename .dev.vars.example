@@ -6,13 +6,13 @@ COMUTES_PRIMARY=
 CI=true
 
 # Hosting
-CF_ACCOUNT_ID= # Show URL: ID:xxx => https://dash.cloudflare.com/xxx
-CF_API_TOKEN= # Cloudflare (User) API Token
-CF_USER_API_TOKEN= # Cloudflare dashboard → My Profile → API Tokens: https://dash.cloudflare.com/xxx/api-tokens
+CLOUDFLARE_ACCOUNT_ID= # Show URL: ID:xxx => https://dash.cloudflare.com/xxx
+CLOUDFLARE_API_TOKEN= # Cloudflare (User) API Token
+CLOUDFLARE_USER_API_TOKEN= # Cloudflare dashboard → My Profile → API Tokens: https://dash.cloudflare.com/xxx/api-tokens
 
 
-CF_KV_NAMESPACE= # npx wrangler kv namespace list
-CF_DATABASE_ID= # npx wrangler d1 list
+CLOUDFLARE_KV_NAMESPACE= # npx wrangler kv namespace list
+CLOUDFLARE_DATABASE_ID= # npx wrangler d1 list
 
 # Database Configuration
 # Development: Use postgres superuser or create a user with proper permissions

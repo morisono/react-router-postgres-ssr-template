@@ -7,14 +7,14 @@ declare namespace Cloudflare {
 		BRANCH_ID: string;
 		PARENT_BRANCH: string;
 		COMUTES_PRIMARY: string;
-		CF_ACCOUNT_ID: string;
-		CF_API_TOKEN: string;
-		CF_USER_API_TOKEN: string;
-		CF_GLOBAL_API_KEY: string;
-		CF_ORIGINAL_CA_KEY: string;
-		CF_KV_NAMESPACE: string;
-		CF_DATABASE_ID: string;
-		CF_D1_TOKEN: string;
+		CLOUDFLARE_ACCOUNT_ID: string;
+		CLOUDFLARE_API_TOKEN: string;
+		CLOUDFLARE_USER_API_TOKEN: string;
+		CLOUDFLARE_GLOBAL_API_KEY: string;
+		CLOUDFLARE_ORIGINAL_CA_KEY: string;
+		CLOUDFLARE_KV_NAMESPACE: string;
+		CLOUDFLARE_DATABASE_ID: string;
+		CLOUDFLARE_D1_TOKEN: string;
 		DB_HOST: string;
 		DB_PORT: string;
 		DB_NAME: string;
@@ -44,7 +44,7 @@ type StringifyValues<EnvType extends Record<string, unknown>> = {
 	[Binding in keyof EnvType]: EnvType[Binding] extends string ? EnvType[Binding] : string;
 };
 declare namespace NodeJS {
-	interface ProcessEnv extends StringifyValues<Pick<Cloudflare.Env, "PROJECT_ID" | "BRANCH_ID" | "PARENT_BRANCH" | "COMUTES_PRIMARY" | "CF_ACCOUNT_ID" | "CF_API_TOKEN" | "CF_USER_API_TOKEN" | "CF_GLOBAL_API_KEY" | "CF_ORIGINAL_CA_KEY" | "CF_KV_NAMESPACE" | "CF_DATABASE_ID" | "CF_D1_TOKEN" | "DB_HOST" | "DB_PORT" | "DB_NAME" | "DB_URL" | "AUDIT_BATCH_SIZE" | "AUDIT_FLUSH_INTERVAL" | "AUDIT_RETENTION_DAYS" | "JWKS_URL" | "DATA_API" | "HYPERDRIVE" | "BOOKS_SERVICE" | "VITE_PUBLIC_URL" | "VITE_PUBLIC_ANALYTICS_ID" | "VITE_STACK_PROJECT_ID" | "VITE_STACK_PUBLISHABLE_CLIENT_KEY" | "STACK_SECRET_SERVER_KEY" | "STRIPE_SECRET_KEY" | "STRIPE_PRICE_ID_ONE_TIME_PAYMENT" | "STRIPE_PRICE_ID_SUBSCRIPTION" | "STRIPE_PRICE_ID_USAGE_BASED_SUBSCRIPTION">> {}
+	interface ProcessEnv extends StringifyValues<Pick<Cloudflare.Env, "PROJECT_ID" | "BRANCH_ID" | "PARENT_BRANCH" | "COMUTES_PRIMARY" | "CLOUDFLARE_ACCOUNT_ID" | "CLOUDFLARE_API_TOKEN" | "CLOUDFLARE_USER_API_TOKEN" | "CLOUDFLARE_GLOBAL_API_KEY" | "CLOUDFLARE_ORIGINAL_CA_KEY" | "CLOUDFLARE_KV_NAMESPACE" | "CLOUDFLARE_DATABASE_ID" | "CLOUDFLARE_D1_TOKEN" | "DB_HOST" | "DB_PORT" | "DB_NAME" | "DB_URL" | "AUDIT_BATCH_SIZE" | "AUDIT_FLUSH_INTERVAL" | "AUDIT_RETENTION_DAYS" | "JWKS_URL" | "DATA_API" | "HYPERDRIVE" | "BOOKS_SERVICE" | "VITE_PUBLIC_URL" | "VITE_PUBLIC_ANALYTICS_ID" | "VITE_STACK_PROJECT_ID" | "VITE_STACK_PUBLISHABLE_CLIENT_KEY" | "STACK_SECRET_SERVER_KEY" | "STRIPE_SECRET_KEY" | "STRIPE_PRICE_ID_ONE_TIME_PAYMENT" | "STRIPE_PRICE_ID_SUBSCRIPTION" | "STRIPE_PRICE_ID_USAGE_BASED_SUBSCRIPTION">> {}
 }
 
 // Begin runtime types
@@ -6247,7 +6247,7 @@ interface IncomingRequestCfPropertiesTLSClientAuthPlaceholder {
     certNotAfter: "";
 }
 /** Possible outcomes of TLS verification */
-declare type CertVerificationStatus = 
+declare type CertVerificationStatus =
 /** Authentication succeeded */
 "SUCCESS"
 /** No certificate was presented */
@@ -6306,7 +6306,7 @@ interface D1ExecResult {
     count: number;
     duration: number;
 }
-type D1SessionConstraint = 
+type D1SessionConstraint =
 // Indicates that the first query should go to the primary, and the rest queries
 // using the same D1DatabaseSession will go to any replica that is consistent with
 // the bookmark maintained by the session (returned by the first query).
@@ -6766,7 +6766,7 @@ declare namespace Rpc {
     // The reason for using a generic type here is to build a serializable subset of structured
     //   cloneable composite types. This allows types defined with the "interface" keyword to pass the
     //   serializable check as well. Otherwise, only types defined with the "type" keyword would pass.
-    type Serializable<T> = 
+    type Serializable<T> =
     // Structured cloneables
     BaseType
     // Structured cloneable composites

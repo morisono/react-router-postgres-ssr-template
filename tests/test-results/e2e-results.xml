@@ -1,5 +1,5 @@
-<testsuites id="" name="" tests="80" failures="0" skipped="80" errors="0" time="0.21910199999999985">
-<testsuite name="books-app.spec.ts" timestamp="2025-08-25T08:48:30.983Z" hostname="chromium" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testsuites id="" name="" tests="80" failures="0" skipped="80" errors="0" time="0.0959739999999997">
+<testsuite name="books-app.spec.ts" timestamp="2025-08-25T09:27:50.010Z" hostname="chromium" tests="16" failures="0" skipped="16" time="0" errors="0">
 <testcase name="Books Application E2E Tests › Homepage › should display the books list" classname="books-app.spec.ts" time="0">
 <skipped>
 </skipped>
@@ -65,7 +65,7 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="books-app.spec.ts" timestamp="2025-08-25T08:48:30.983Z" hostname="firefox" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testsuite name="books-app.spec.ts" timestamp="2025-08-25T09:27:50.010Z" hostname="firefox" tests="16" failures="0" skipped="16" time="0" errors="0">
 <testcase name="Books Application E2E Tests › Homepage › should display the books list" classname="books-app.spec.ts" time="0">
 <skipped>
 </skipped>
@@ -131,7 +131,7 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="books-app.spec.ts" timestamp="2025-08-25T08:48:30.983Z" hostname="webkit" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testsuite name="books-app.spec.ts" timestamp="2025-08-25T09:27:50.010Z" hostname="webkit" tests="16" failures="0" skipped="16" time="0" errors="0">
 <testcase name="Books Application E2E Tests › Homepage › should display the books list" classname="books-app.spec.ts" time="0">
 <skipped>
 </skipped>
@@ -197,7 +197,7 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="books-app.spec.ts" timestamp="2025-08-25T08:48:30.983Z" hostname="Mobile Chrome" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testsuite name="books-app.spec.ts" timestamp="2025-08-25T09:27:50.010Z" hostname="Mobile Chrome" tests="16" failures="0" skipped="16" time="0" errors="0">
 <testcase name="Books Application E2E Tests › Homepage › should display the books list" classname="books-app.spec.ts" time="0">
 <skipped>
 </skipped>
@@ -263,7 +263,7 @@
 </skipped>
 </testcase>
 </testsuite>
-<testsuite name="books-app.spec.ts" timestamp="2025-08-25T08:48:30.983Z" hostname="Mobile Safari" tests="16" failures="0" skipped="16" time="0" errors="0">
+<testsuite name="books-app.spec.ts" timestamp="2025-08-25T09:27:50.010Z" hostname="Mobile Safari" tests="16" failures="0" skipped="16" time="0" errors="0">
 <testcase name="Books Application E2E Tests › Homepage › should display the books list" classname="books-app.spec.ts" time="0">
 <skipped>
 </skipped>

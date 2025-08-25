@@ -17,7 +17,7 @@ npx wrangler d1 list
 
 * Cloudflare Workers + React Router SSR のテンプレートを TypeScript で作成
 * GitHub リポジトリは一旦 private、後で public に変更可能
-* "Edit Cloudflare Workers" でCF_ACCOUNT_IDを発行,記入 ( Accounts:D1:Edit 権限が必要 )
+* "Edit Cloudflare Workers" でCLOUDFLARE_ACCOUNT_IDを発行,記入 ( Accounts:D1:Edit 権限が必要 )
 
 ## 2. 環境設定
 
@@ -28,7 +28,7 @@ cp .env.example .env  # 必要に応じて編集
 source .env                                   # Use set -x XXX for fish
 
 npx wrangler secret put DB_URL
-npx wrangler secret put CF_API_TOKEN
+npx wrangler secret put CLOUDFLARE_API_TOKEN
 npx wrangler secret list
 
 # Wrangler already loads .dev.vars automatically if present, so you don’t need to source it manually
@@ -71,7 +71,7 @@ id = "xxxx..."
 app.post('/login', async (c) => {
   const { email } = await c.req.json()
   const token = crypto.randomUUID()
-  await c.env.CF_KV_NAMESPACE.put(`session:${token}`, email, { expirationTtl: 3600 })
+  await c.env.CLOUDFLARE_KV_NAMESPACE.put(`session:${token}`, email, { expirationTtl: 3600 })
   return c.json({ token })
 })
 ```
@@ -272,8 +272,8 @@ npm run deploy
 * Secretの設定：
 
 ```sh
-gh secret set CF_ACCOUNT_ID
-gh secret set CF_API_TOKEN
+gh secret set CLOUDFLARE_ACCOUNT_ID
+gh secret set CLOUDFLARE_API_TOKEN
 gh secret set MY_VARIABLE
 ```
 
