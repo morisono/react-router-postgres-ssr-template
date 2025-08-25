@@ -15,6 +15,12 @@ export default defineWorkersConfig({
     coverage: {
       enabled: false,
     },
+    // Override CLI coverage flag in CI
+    ...(process.env.CI && {
+      coverage: {
+        enabled: false,
+      },
+    }),
     poolOptions: {
       workers: {
         wrangler: {
