@@ -136,11 +136,17 @@ jobs:
           echo "NODE_ENV=test" >> .dev.vars.test
 
       - name: Run unit tests - ${{ matrix.test-group }}
-        run: npm run test:${{ matrix.test-group }} -- --coverage --reporter=json --reporter=default
+        run: |
+          if [ "${{ matrix.test-group }}" = "workers" ]; then
+            npm run test:${{ matrix.test-group }} -- --reporter=json --reporter=default
+          else
+            npm run test:${{ matrix.test-group }} -- --coverage --reporter=json --reporter=default
+          fi
         env:
           CI: true
 
       - name: Upload coverage to Codecov
+        if: matrix.test-group != 'workers'
         uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}

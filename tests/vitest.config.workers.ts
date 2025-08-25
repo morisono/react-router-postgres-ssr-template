@@ -11,16 +11,11 @@ export default defineWorkersConfig({
     // Add timeout for workers tests as they can be slower
     testTimeout: 30000,
     hookTimeout: 30000,
-    // Disable coverage for workers tests as it's not compatible with Cloudflare Workers runtime
+    // Force disable coverage for workers tests - this overrides any CLI flags
     coverage: {
       enabled: false,
+      provider: undefined,
     },
-    // Override CLI coverage flag in CI
-    ...(process.env.CI && {
-      coverage: {
-        enabled: false,
-      },
-    }),
     poolOptions: {
       workers: {
         wrangler: {
@@ -29,5 +24,9 @@ export default defineWorkersConfig({
         },
       },
     },
+  },
+  // Also disable coverage at the root level to ensure CLI flags don't override
+  coverage: {
+    enabled: false,
   },
 });
