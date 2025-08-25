@@ -1,6 +1,6 @@
-import { defineWorkersConfig } from '@cloudflare/vitest-pool-workers/config';
+import { defineConfig } from 'vitest/config';
 
-export default defineWorkersConfig({
+export default defineConfig({
   test: {
     globals: true,
     environment: 'jsdom',
@@ -19,20 +19,7 @@ export default defineWorkersConfig({
         'assets/',
       ],
       thresholds: {
-        global: {
-          branches: 70,
-          functions: 80,
-          lines: 80,
-          statements: 80,
-        },
-      },
-    },
-    poolOptions: {
-      workers: {
-        wrangler: {
-          configPath: '../wrangler.jsonc',
-          environment: 'test',
-        },
+        global: { branches: 70, functions: 80, lines: 80, statements: 80 },
       },
     },
   },
