@@ -76,7 +76,7 @@ app.post('/login', async (c) => {
 })
 ```
 
-### SQLite / Drizzle
+### SQLite 
 
 新規登録:
 ```
@@ -95,6 +95,9 @@ npx wrangler d1 execute s12001-d1-1 --command $QUERY
 
 **Drizzle連携:**
 
+
+Setting up the TypeScript application
+
 ```
 npm install drizzle-orm drizzle-kit better-sqlite3
 ```
@@ -109,6 +112,8 @@ npm install drizzle-orm drizzle-kit better-sqlite3
   } satisfies Config;
   ```
 
+Set up the database schema
+
 - schema.ts
   ```
   import { sqliteTable, integer, text } from "drizzle-orm/sqlite-core";
@@ -118,6 +123,9 @@ npm install drizzle-orm drizzle-kit better-sqlite3
     name: text("name"),
   });
   ```
+
+Find your database connection string by clicking the Connect button on your Project Dashboard to open the Connect to your database modal. 
+
 
 **Ref.:** Local DB needs Docker
 - https://developers.cloudflare.com/hyperdrive/examples/connect-to-postgres/
@@ -150,6 +158,13 @@ CI/CD:
 - `.github/workflows/deploy-cf-d1-drizzle.yaml`: Drizzle:移行 -> Wrangler:D1へ適用
 
 
+### Posggres Drizzle
+
+**Ref.:**
+- https://neon.com/docs/guides/drizzle-migrations
+
+
+
 ## 4. D1 / HyperDrive (Postgres)
 
 ```sh
@@ -169,10 +184,20 @@ DATABASE_name = "mydb"
 DATABASE_id = "xxxx"
 ```
 
+Implement the API endpoints
+
+- index.ts
+```
+
+```
+
+
 ### Neonの設定
 
 * Neonアカウント作成 → Postgresインスタンス作成
 * 環境変数を確認・設定 (`DATABASE_URL` など)
+* CLI: `brew install neonctl`
+* Launchpad: `npx neondb`
 
 **統合**:
 * GitHub
