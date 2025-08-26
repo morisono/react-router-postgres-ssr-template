@@ -1,0 +1,46 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "github_token",
+      "description": "GitHub Personal Access Token",
+      "password": true
+    }
+  ],
+  "servers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "${workspaceFolder}"
+      ]
+    },
+    "neon": {
+      "command": "wsl",
+      "args": ["npx", "-y", "@neondatabase/mcp-server-neon", "start", "<YOUR_NEON_API_KEY>"]
+    },
+    "stripe": {
+      "command": "npx",
+      "args": [
+          "-y",
+          "@stripe/mcp",
+          "--tools=all",
+          "--api-key=STRIPE_SECRET_KEY"
+      ]
+    },
+    "postgresql-mcp": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://test:test@localhost:15432/test"]
+    },
+    "docs.cloudflare": {
+        "command": "npx",
+        "args": ["mcp-remote", "https://docs.mcp.cloudflare.com/sse"]
+    },
+    "hyperbrowser": {
+      "command": "bash",
+      "args": ["-c", "export HYPERBROWSER_API_KEY=*** && npx hyperbrowser-mcp"]
+    },
+    "playwright": {"command": "npx", "args": ["@playwright/mcp@latest"]}
+  }
+}
