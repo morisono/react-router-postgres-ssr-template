@@ -14,7 +14,7 @@ This guide covers the specific integration patterns and optimizations for using 
 For Neon with Drizzle ORM integration, include these specific dependencies:
 
 ```bash
-npm install drizzle-orm @neondatabase/serverless dotenv
+npm install drizzle-orm @neondatabase/serverless @dotenvx/dotenvx
 npm install -D drizzle-kit
 ```
 
@@ -40,7 +40,7 @@ When connecting to Neon specifically:
 // src/db.ts
 import { drizzle } from 'drizzle-orm/neon-http';
 import { neon } from '@neondatabase/serverless';
-import { config } from 'dotenv';
+import { config } from '@dotenvx/dotenvx';
 
 // Load environment variables
 config({ path: '.env' });
@@ -110,7 +110,7 @@ Neon-specific configuration in `drizzle.config.ts`:
 
 ```typescript
 // drizzle.config.ts
-import { config } from 'dotenv';
+import { config } from '@dotenvx/dotenvx';
 import { defineConfig } from 'drizzle-kit';
 
 config({ path: '.env' });
