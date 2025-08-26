@@ -169,38 +169,54 @@ DATABASE_name = "mydb"
 DATABASE_id = "xxxx"
 ```
 
-### Neon Postgres
+### Neonの設定
 
 * Neonアカウント作成 → Postgresインスタンス作成
-* HyperDrive経由接続：
+* 環境変数を確認・設定 (`DATABASE_URL` など)
 
-```sh
-npx wrangler hyperdrive create my-hyperdrive-config --connection-string="$DATABASE_URL"
-```
+**統合**:
+* GitHub
+  - Installing the GitHub app and authorizing it.
+  - Connecting your Neon project to the corresponding GitHub repository.
+  - Adding GitHub Actions code to your repo using our provided samples.
 
-`wrangler.jsonc`:
+* Cloudflare Workers: https://neon.com/docs/guides/cloudflare-hyperdrive
+* Drizzle: https://neon.com/docs/guides/drizzle
+* Hono: https://neon.com/docs/guides/hono
+* Cloudflare R2: https://neon.com/docs/guides/cloudflare-r2
+* HyperDrive: https://neon.com/docs/guides/cloudflare-hyperdrive
 
-```jsonc
-"hyperdrive": [
-  {
-    "binding": "HYPERDRIVE",
-    "id": "YOUR_HYPERDRIVE_ID",
-    "localConnectionString": "postgresql://myuser:mypassword@localhost:5432/mydatabase"
-  }
-]
-```
+  * HyperDrive経由接続：
 
-例：`users` テーブル
+  ```sh
+  npx wrangler hyperdrive create my-hyperdrive-config --connection-string="$DATABASE_URL"
+  ```
 
-```sql
-CREATE TABLE users (
-  id SERIAL PRIMARY KEY,
-  name TEXT NOT NULL,
-  email TEXT UNIQUE NOT NULL,
-  created_at TIMESTAMPTZ DEFAULT now()
-);
-```
+  `wrangler.jsonc`:
 
+  ```jsonc
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "YOUR_HYPERDRIVE_ID",
+      "localConnectionString": "postgresql://myuser:mypassword@localhost:5432/mydatabase"
+    }
+  ]
+  ```
+
+  例：`users` テーブル
+
+  ```sql
+  CREATE TABLE users (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    created_at TIMESTAMPTZ DEFAULT now()
+  );
+  ```
+
+**For more:** 
+- [AI Rules: Neon with Drizzle](https://neon.com/docs/ai/ai-rules-neon-drizzle)
 
 ## 5. R2（オプションのオブジェクトストレージ）
 
