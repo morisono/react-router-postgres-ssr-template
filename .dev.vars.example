@@ -1,10 +1,3 @@
-# Project
-PROJECT_ID=
-BRANCH_ID=
-PARENT_BRANCH=
-COMUTES_PRIMARY=
-CI=true
-
 # Hosting
 CLOUDFLARE_ACCOUNT_ID= # Show URL: ID:xxx => https://dash.cloudflare.com/xxx
 CLOUDFLARE_API_TOKEN= # Cloudflare (User) API Token
@@ -28,8 +21,14 @@ AUDIT_FLUSH_INTERVAL=5000
 AUDIT_RETENTION_DAYS=2555
 
 # Neon DB
+NEON_PERSONAL_API_KEY= # From NeonDB "Account settings"
+NEON_PROJECT_ID=
+NEON_BRANCH_ID=
+NEON_PARENT_BRANCH=
+NEON_COMUTES_PRIMARY=
+NEON_DATA_API=https://xxxxxxxxxxx.dpl.myneon.app # From NeonDB "Connect"
+NEON_API_KEY= # From NeonDB "Integration" with GitHub
 JWKS_URL=https://api.stack-auth.com/api/v1/projects/test-stack-project-id/.well-known/jwks.json
-DATA_API=https://xxxxxxxxxxx.dpl.myneon.app
 
 # HyperDrive
 HYPERDRIVE=test-hyperdrive-connection
@@ -49,3 +48,6 @@ STRIPE_SECRET_KEY=
 STRIPE_PRICE_ID_ONE_TIME_PAYMENT=
 STRIPE_PRICE_ID_SUBSCRIPTION=
 STRIPE_PRICE_ID_USAGE_BASED_SUBSCRIPTION=
+
+# Other
+CI=true
