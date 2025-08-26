@@ -28,6 +28,7 @@ NEON_PARENT_BRANCH=
 NEON_COMUTES_PRIMARY=
 NEON_DATA_API=https://xxxxxxxxxxx.dpl.myneon.app # From NeonDB "Connect"
 NEON_API_KEY= # From NeonDB "Integration" with GitHub
+STACK_AUTH_PROJECT_ID=
 JWKS_URL=https://api.stack-auth.com/api/v1/projects/test-stack-project-id/.well-known/jwks.json
 
 # HyperDrive
