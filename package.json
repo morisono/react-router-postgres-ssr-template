@@ -2,6 +2,7 @@
   "name": "react-router-postgres-ssr-template",
   "description": "Deploy your own library of books using Postgres and Workers.",
   "private": true,
+  "workspaces": ["packages/*"],
   "cloudflare": {
     "label": "React Router SSR template",
     "products": [
@@ -11,16 +12,14 @@
       "Workers Static Assets",
       "Smart Placement"
     ],
-    "categories": [
-      "starter",
-      "storage"
-    ],
+    "categories": ["starter", "storage"],
     "docs_url": "https://developers.cloudflare.com/workers/frameworks/framework-guides/react-router/",
     "icon_urls": [],
     "preview_image_url": "https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/8db618d7-0c0e-4ab5-f6f5-721e45b80c00/public",
     "publish": false
   },
   "dependencies": {
+    "@myapp/database": "workspace:*",
     "@neondatabase/serverless": "^1.0.1",
     "@types/pg": "^8.15.5",
     "better-sqlite3": "^12.2.0",
