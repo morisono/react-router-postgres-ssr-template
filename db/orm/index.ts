@@ -1,48 +1,45 @@
-// src/index.ts
+/**
+ * Database ORM Module
+ *
+ * This module provides a comprehensive multi-database ORM architecture
+ * supporting Neon, Supabase, and Local PostgreSQL providers through
+ * a unified factory pattern.
+ */
 
-import { config } from '@dotenvx/dotenvx';
-import { serve } from '@hono/node-server';
-import { Hono } from 'hono';
-import { env } from 'hono/adapter';
+// Re-export schema and types
+export * from './schema';
+export * from './types';
 
-import { neon } from '@neondatabase/serverless';
-import { eq } from 'drizzle-orm';
-import { drizzle } from 'drizzle-orm/neon-http';
-import { authors, books } from './schema';
+// Re-export factory functions and client types
+export {
+    closeConnection, createDatabaseClient,
+    createDefaultClient,
+    getCurrentProvider, healthCheck, validateProviderConfig, type DatabaseClient,
+    type DatabaseProvider
+} from './factory';
 
-config({ path: '.env' });
-const app = new Hono();
+// Re-export individual client creators
+export { createLocalClient, type LocalClient } from './clients/local';
+export { createNeonClient, type NeonClient } from './clients/neon';
+export { createSupabaseClient, type SupabaseClient } from './clients/supabase';
 
-app.get('/', (c) => {
-  return c.text('Hello, this is a catalog of books!');
-});
+// Re-export migration utilities
+export {
+    getMigrationStatus, resetMigrations, runAllMigrations, runMigrations, validateMigrations
+} from './migrations';
 
-app.get('/authors', async (c) => {
-  const { DATABASE_URL } = env<{ DATABASE_URL: string }>(c);
-  const sql = neon(DATABASE_URL);
-  const db = drizzle(sql);
+// Re-export repositories
+export {
+    AuthorRepository, BookRepository, createRepositories,
+    type Repositories
+} from './repositories';
 
-  const output = await db.select().from(authors);
-  return c.json(output);
-});
+// Import for default instance
+import { createDefaultClient } from './factory';
+import { createRepositories } from './repositories';
 
-app.get('/books/:authorId', async (c) => {
-  const { DATABASE_URL } = env<{ DATABASE_URL: string }>(c);
-  const sql = neon(DATABASE_URL);
-  const db = drizzle(sql);
+// Default database instance for convenience
+export const db = createDefaultClient();
 
-  const authorId = c.req.param('authorId');
-  const output = await db
-    .select()
-    .from(books)
-    .where(eq(books.authorId, Number(authorId)));
-  return c.json(output);
-});
-
-const port = 3000;
-console.log(`Server is running on port ${port}`);
-
-serve({
-  fetch: app.fetch,
-  port,
-});
+// Default repository instances
+export const repositories = createRepositories(db);

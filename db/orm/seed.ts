@@ -1,102 +1,190 @@
-// src/seed.ts
+/**
+ * Database seeding script for multi-provider setup
+ *
+ * This script populates the database with sample data for testing and development.
+ * It supports all configured database providers (Neon, Supabase, Local).
+ */
 
 import { config } from '@dotenvx/dotenvx';
-import { drizzle } from 'drizzle-orm/node-postgres';
-import { Client } from 'pg';
-import { books } from './schema';
+import { createDatabaseClient, createRepositories, getCurrentProvider } from './index';
 
+// Load environment variables
 config({ path: '.env' });
 
-async function seed() {
-  const client = new Client({
-    connectionString: process.env.DATABASE_URL!,
-  });
+/**
+ * Sample authors data
+ */
+const sampleAuthors = [
+  {
+    name: 'J.K. Rowling',
+    bio: 'British author best known for the Harry Potter series.',
+    birthYear: 1965,
+    nationality: 'British',
+    website: 'https://www.jkrowling.com/',
+  },
+  {
+    name: 'George R.R. Martin',
+    bio: 'American novelist and short story writer, best known for A Song of Ice and Fire.',
+    birthYear: 1948,
+    nationality: 'American',
+    website: 'https://grrm.livejournal.com/',
+  },
+  {
+    name: 'Agatha Christie',
+    bio: 'English writer known for her detective novels.',
+    birthYear: 1890,
+    nationality: 'British',
+  },
+  {
+    name: 'Stephen King',
+    bio: 'American author of horror, supernatural fiction, suspense, and fantasy novels.',
+    birthYear: 1947,
+    nationality: 'American',
+    website: 'https://stephenking.com/',
+  },
+  {
+    name: 'Haruki Murakami',
+    bio: 'Japanese writer whose work has been translated into 50 languages.',
+    birthYear: 1949,
+    nationality: 'Japanese',
+  },
+];
+
+/**
+ * Sample books data (will be linked to authors after creation)
+ */
+const sampleBooks = [
+  {
+    title: "Harry Potter and the Philosopher's Stone",
+    authorName: 'J.K. Rowling',
+    description: "A young wizard's journey begins at Hogwarts School of Witchcraft and Wizardry.",
+    genre: 'Fantasy',
+    isbn: '9780747532699',
+    publishedYear: 1997,
+    pageCount: 223,
+    language: 'en',
+    rating: 5,
+    price: 1299, // $12.99 in cents
+  },
+  {
+    title: 'A Game of Thrones',
+    authorName: 'George R.R. Martin',
+    description: 'The first book in the epic fantasy series A Song of Ice and Fire.',
+    genre: 'Fantasy',
+    isbn: '9780553103540',
+    publishedYear: 1996,
+    pageCount: 694,
+    language: 'en',
+    rating: 5,
+    price: 1599,
+  },
+  {
+    title: 'Murder on the Orient Express',
+    authorName: 'Agatha Christie',
+    description: 'Hercule Poirot investigates a murder aboard the famous train.',
+    genre: 'Mystery',
+    isbn: '9780062693662',
+    publishedYear: 1934,
+    pageCount: 256,
+    language: 'en',
+    rating: 4,
+    price: 999,
+  },
+  {
+    title: 'The Shining',
+    authorName: 'Stephen King',
+    description: 'A horror novel about a family isolated in a haunted hotel.',
+    genre: 'Horror',
+    isbn: '9780307743657',
+    publishedYear: 1977,
+    pageCount: 447,
+    language: 'en',
+    rating: 4,
+    price: 1199,
+  },
+  {
+    title: 'Norwegian Wood',
+    authorName: 'Haruki Murakami',
+    description: 'A nostalgic story of loss and burgeoning sexuality.',
+    genre: 'Literary Fiction',
+    isbn: '9780375704024',
+    publishedYear: 1987,
+    pageCount: 296,
+    language: 'en',
+    rating: 4,
+    price: 1399,
+  },
+];
+
+/**
+ * Seeds the database with sample data
+ */
+async function seedDatabase(provider?: string) {
+  const dbProvider = (provider as any) || getCurrentProvider();
+  console.log(`🌱 Seeding database for provider: ${dbProvider}`);
 
   try {
-    await client.connect();
-    const db = drizzle(client);
+    const db = createDatabaseClient(dbProvider);
+    const repos = createRepositories(db);
 
-    await db.insert(books).values([
-      {
-        title: 'The Brothers Karamazov',
-        author: 'Fyodor Dostoevsky',
-        description: 'A passionate philosophical novel set in 19th-century Russia, which explores ethical debates of God, free will, and morality.',
-        imageUrl: '/images/books/brothers-karamazov.jpg',
-        genre: 'Literary Fiction',
-      },
-      {
-        title: 'East of Eden',
-        author: 'John Steinbeck',
-        description: 'A multigenerational family saga set in the Salinas Valley, California, exploring themes of good and evil through the intertwined stories of two families.',
-        imageUrl: '/images/books/east-of-eden.jpg',
-        genre: 'Literary Fiction',
-      },
-      {
-        title: 'The Fifth Season',
-        author: 'N.K. Jemisin',
-        description: 'Set in a world where catastrophic climate change occurs regularly, this novel follows a woman searching for her daughter while navigating a society divided by powers.',
-        imageUrl: '/images/books/fifth-season.jpg',
-        genre: 'Science Fiction & Fantasy',
-      },
-      {
-        title: 'Jane Eyre',
-        author: 'Charlotte Brontë',
-        description: 'A novel about a strong-willed orphan who becomes a governess, falls in love with her employer, and discovers his dark secret.',
-        imageUrl: '/images/books/jane-eyre.jpg',
-        genre: 'Literary Fiction',
-      },
-      {
-        title: 'Anna Karenina',
-        author: 'Leo Tolstoy',
-        description: 'A complex novel of family life among the Russian aristocracy, focusing on an adulterous affair between Anna Karenina and Count Vronsky.',
-        imageUrl: '/images/books/anna-karenina.jpg',
-        genre: 'Literary Fiction',
-      },
-      {
-        title: 'Giovanni\'s Room',
-        author: 'James Baldwin',
-        description: 'A groundbreaking novel that follows an American man living in Paris as he grapples with his sexual identity and relationships.',
-        imageUrl: '/images/books/giovannis-room.jpg',
-        genre: 'Historical Fiction',
-      },
-      {
-        title: 'My Brilliant Friend',
-        author: 'Elena Ferrante',
-        description: 'The first novel in the Neapolitan quartet that traces the friendship between Elena and Lila, from their childhood in a poor Naples neighborhood through their diverging paths in life.',
-        imageUrl: '/images/books/my-brilliant-friend.jpg',
-        genre: 'Literary Fiction',
-      },
-      {
-        title: 'The Remains of the Day',
-        author: 'Kazuo Ishiguro',
-        description: 'The story of an English butler reflecting on his life of service and missed opportunities as he takes a road trip through the countryside.',
-        imageUrl: '/images/books/remains-of-the-day.jpg',
-        genre: 'Historical Fiction',
-      },
-      {
-        title: 'The Left Hand of Darkness',
-        author: 'Ursula K. Le Guin',
-        description: 'A science fiction novel that follows an envoy sent to convince the ambisexual people of the planet Gethen to join an interplanetary collective.',
-        imageUrl: '/images/books/left-hand-of-darkness.jpg',
-        genre: 'Science Fiction & Fantasy',
-      },
+    console.log('📚 Creating authors...');
+    const createdAuthors = [];
+    for (const authorData of sampleAuthors) {
+      const author = await repos.authors.create(authorData);
+      createdAuthors.push(author);
+      console.log(`✅ Created author: ${author.name}`);
+    }
+
+    console.log('📖 Creating books...');
+    const authorMap = new Map(createdAuthors.map(a => [a.name, a.id]));
+
+    for (const bookData of sampleBooks) {
+      const authorId = authorMap.get(bookData.authorName);
+      if (authorId) {
+        const { authorName, ...bookInfo } = bookData;
+        const book = await repos.books.create({
+          ...bookInfo,
+          authorId,
+        });
+        console.log(`✅ Created book: ${book.title}`);
+      } else {
+        console.warn(`⚠️  Author not found for book: ${bookData.title}`);
+      }
+    }
+
+    console.log('📊 Database statistics:');
+    const [authorStats, bookStats] = await Promise.all([
+      repos.authors.getStats(),
+      repos.books.getStats(),
     ]);
+
+    console.log(`   Authors: ${authorStats.total}`);
+    console.log(`   Books: ${bookStats.total}`);
+    console.log(`   Average book rating: ${bookStats.averageRating}`);
+
+    console.log('🎉 Database seeding completed successfully!');
+
   } catch (error) {
-    console.error('Error during seeding:', error);
+    console.error('❌ Error seeding database:', error);
     process.exit(1);
-  } finally {
-    await client.end();
   }
 }
 
+/**
+ * Main execution
+ */
 async function main() {
-  try {
-    await seed();
-    console.log('Seeding completed');
-  } catch (error) {
-    console.error('Error during seeding:', error);
+  const provider = process.argv[2]; // Optional provider argument
+
+  if (provider && !['neon', 'supabase', 'local'].includes(provider)) {
+    console.error('❌ Invalid provider. Use: neon, supabase, or local');
     process.exit(1);
   }
+
+  await seedDatabase(provider);
 }
 
-main();
+// Run if called directly
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch(console.error);
+}
