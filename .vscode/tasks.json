@@ -14,7 +14,7 @@
         "panel": "shared"
       },
       "options": {
-        "cwd": "${workspaceFolder}/client"
+        "cwd": "${workspaceFolder}/apps/frontend"
       }
     },
     {
@@ -27,7 +27,7 @@
         "panel": "shared"
       },
       "options": {
-        "cwd": "${workspaceFolder}/server"
+        "cwd": "${workspaceFolder}/apps/backend"
       }
     },
     {
@@ -87,7 +87,7 @@
         "panel": "dedicated"
       },
       "options": {
-        "cwd": "${workspaceFolder}/client"
+        "cwd": "${workspaceFolder}/apps/frontend"
       },
       "runOptions": {
         "instanceLimit": 1
@@ -105,7 +105,7 @@
         "panel": "dedicated"
       },
       "options": {
-        "cwd": "${workspaceFolder}/server"
+        "cwd": "${workspaceFolder}/apps/backend"
       },
       "runOptions": {
         "instanceLimit": 1
@@ -130,7 +130,7 @@
         "panel": "new"
       },
       "options": {
-        "cwd": "${workspaceFolder}/tests-e2e"
+        "cwd": "${workspaceFolder}/tests/e2e"
       }
     }
   ]
