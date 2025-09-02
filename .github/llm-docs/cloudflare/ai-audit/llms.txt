@@ -1,0 +1,1246 @@
+<page>
+---
+title: Overview · AI Audit
+description: Monitor and control how AI services access your website content.
+lastUpdated: 2025-07-29T08:36:09.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/
+  md: https://developers.cloudflare.com/ai-audit/index.md
+---
+
+Available on all plans
+
+Monitor and control how AI services access your website content.
+
+AI companies are increasingly using web content to train their models and power AI applications. AI Audit gives you visibility into which AI services are accessing your content, and provides tools to manage access according to your preferences.
+
+With AI Audit, you can:
+
+* **See which AI services access your content** - Monitor the dashboard to see crawler activity and request patterns
+* **Control access with granular policies** - Set allow or block rules for individual crawlers
+* **Monitor robots.txt compliance** - Track which crawlers follow your directives and create enforcement rules
+* **Explore monetization options** - Set up pay per crawl pricing for content access [(private beta)](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/)
+* **Deploy with zero configuration** - Works automatically on all Cloudflare plans
+
+Beta phase
+
+AI Audit is currently only available as a beta product.
+
+[Get started](https://developers.cloudflare.com/ai-audit/get-started/)
+
+***
+
+## Features
+
+### Manage AI crawlers
+
+Control how AI crawlers interact with your domain.
+
+[Manage AI crawlers](https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/)
+
+### Analyze AI traffic
+
+Gain insight into how AI crawlers are interacting with your pages.
+
+[Analyze AI traffic](https://developers.cloudflare.com/ai-audit/features/analyze-ai-traffic/)
+
+### Pay Per Crawl
+
+Allow AI crawlers to access content by paying per crawl.
+
+[Pay per crawl](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/)
+
+***
+
+## Use cases
+
+Publishers and content creators
+
+Publishers and content creators can monitor which AI crawlers are accessing their articles and educational content. Set policies to allow beneficial crawlers while blocking others.
+
+E-commerce and business sites
+
+E-commerce and business sites can identify AI crawler activity on product pages and business information. Control access to sensitive data like pricing and inventory.
+
+Documentation sites
+
+Documentation sites can track how AI crawlers are accessing their technical documentation. Gain insight into how AI crawlers are engaging with your site.
+
+***
+
+## Related Products
+
+**[Bots](https://developers.cloudflare.com/bots/)**
+
+Identify and mitigate automated traffic to protect your domain from bad bots.
+
+**[Web Application Firewall](https://developers.cloudflare.com/waf/)**
+
+Get automatic protection from vulnerabilities and the flexibility to create custom rules.
+
+**[Analytics](https://developers.cloudflare.com/analytics/)**
+
+View and analyze traffic on your domain.
+
+</page>
+
+<page>
+---
+title: 404 - Page Not Found · AI Audit
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/404/
+  md: https://developers.cloudflare.com/ai-audit/404/index.md
+---
+
+# 404
+
+Check the URL, try using our [search](https://developers.cloudflare.com/search/) or try our LLM-friendly [llms.txt directory](https://developers.cloudflare.com/llms.txt).
+
+</page>
+
+<page>
+---
+title: Changelog · AI Audit
+description: We are introducing a new feature of AI Audit — Pay Per Crawl. Pay
+  Per Crawl enables site owners to require payment from AI crawlers every time
+  the crawlers access their content, thereby fostering a fairer Internet by
+  enabling site owners to control and monetize how their content gets used by
+  AI.
+lastUpdated: 2025-06-09T18:04:03.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/changelog/
+  md: https://developers.cloudflare.com/ai-audit/changelog/index.md
+---
+
+[Subscribe to RSS](https://developers.cloudflare.com/changelog/rss/ai-audit.xml)
+
+## 2025-07-01
+
+**Introducing Pay Per Crawl (private beta)**
+
+We are introducing a new feature of [AI Audit](https://developers.cloudflare.com/ai-audit/) — Pay Per Crawl. [Pay Per Crawl](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/) enables site owners to require payment from AI crawlers every time the crawlers access their content, thereby fostering a fairer Internet by enabling site owners to control and monetize how their content gets used by AI.
+
+![Pay per crawl](https://developers.cloudflare.com/_astro/pay-per-crawl.B5bv2nwT_Z1qUoVQ.webp)
+
+**For Site Owners:**
+
+* Set pricing and select which crawlers to charge for content access
+* Manage payments via Stripe
+* Monitor analytics on successful content deliveries
+
+**For AI Crawler Owners:**
+
+* Use HTTP headers to request and accept pricing
+* Receive clear confirmations on charges for accessed content
+
+Learn more in the [Pay Per Crawl documentation](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/).
+
+## 2025-07-01
+
+**AI Audit refresh**
+
+We redesigned the AI Audit dashboard to provide more intuitive and granular control over AI crawlers.
+
+* From the new **AI Crawlers** tab: block specific AI crawlers.
+* From the new **Metrics** tab: view AI Audit metrics.
+
+![Block AI crawlers](https://developers.cloudflare.com/_astro/manage-ai-crawlers.6UgS8dSG_12BsLg.webp) ![Analyze AI crawler activity](https://developers.cloudflare.com/_astro/analyze-metrics.C52pJZVg_Z1IvdY4.webp)
+
+To get started, explore:
+
+* [Manage AI crawlers](https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/).
+* [Analyze AI traffic](https://developers.cloudflare.com/ai-audit/features/analyze-ai-traffic/).
+
+## 2024-09-23
+
+**AI Audit**
+
+Every site on Cloudflare now has access to [**AI Audit**](https://developers.cloudflare.com/ai-audit/), which summarizes the crawling behavior of popular and known AI services.
+
+You can use this data to:
+
+* Understand how and how often crawlers access your site (and which content is the most popular).
+* Block specific AI bots accessing your site.
+* Use Cloudflare to enforce your `robots.txt` policy via an automatic WAF rule.
+
+![View AI bot activity with AI Audit](https://developers.cloudflare.com/_astro/ai-audit-overview.Dr_yGKOC_Fcnd9.webp)
+
+To get started, explore [AI audit](https://developers.cloudflare.com/ai-audit/).
+
+</page>
+
+<page>
+---
+title: Configuration · AI Audit
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/configuration/
+  md: https://developers.cloudflare.com/ai-audit/configuration/index.md
+---
+
+* [AI Audit with Cloudflare WAF](https://developers.cloudflare.com/ai-audit/configuration/ai-audit-with-waf/)
+* [AI Audit with Cloudflare Bots](https://developers.cloudflare.com/ai-audit/configuration/ai-audit-with-bots/)
+
+</page>
+
+<page>
+---
+title: Features · AI Audit
+lastUpdated: 2025-06-09T18:04:03.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/
+  md: https://developers.cloudflare.com/ai-audit/features/index.md
+---
+
+* [Analyze AI traffic](https://developers.cloudflare.com/ai-audit/features/analyze-ai-traffic/)
+* [Manage AI crawlers](https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/)
+* [Pay Per Crawl](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/)
+
+</page>
+
+<page>
+---
+title: Get started with Cloudflare AI Audit · AI Audit
+description: Learn how to set up AI Audit.
+lastUpdated: 2025-07-29T08:36:09.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/get-started/
+  md: https://developers.cloudflare.com/ai-audit/get-started/index.md
+---
+
+This guide instructs you on how to:
+
+* View AI crawlers that are interacting with pages in your domain (a [Cloudflare zone](https://developers.cloudflare.com/fundamentals/concepts/accounts-and-zones/#zones)).
+* Use AI Audit to block individual crawlers from accessing your content.
+
+## Prerequisites
+
+1. Sign up for a [Cloudflare account](https://dash.cloudflare.com/sign-up/).
+2. [Connect your domain to Cloudflare](https://developers.cloudflare.com/fundamentals/manage-domains/add-site/).
+3. Make sure your domain is [proxying traffic through Cloudflare](https://developers.cloudflare.com/fundamentals/concepts/how-cloudflare-works/#cloudflare-as-a-reverse-proxy).
+
+## 1. Block specific AI crawlers
+
+* All plans
+
+  To only block specific AI crawlers:
+
+  1. Go to **AI Audit**.
+  2. From the **AI Crawlers** tab, go to the list of AI crawlers.
+  3. Review the AI crawlers that are accessing your domain.
+  4. From the **Block** column, select the option **Block**.
+
+  Quality of AI crawler detection
+
+  On the free plan, AI Audit identifies AI crawlers based on their [user agent strings](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/User-Agent). This enables AI Audit to detect easy-to-detect (well-known) AI crawlers.
+
+  Upgrade your plan to enable a more thorough detection using Cloudflare's [Bot Management detection ID](https://developers.cloudflare.com/bots/reference/bot-management-variables/#ruleset-engine-fields) field.
+
+* Paid plans
+
+  To only block specific AI crawlers:
+
+  1. Go to **AI Audit**.
+
+  2. From the **AI Crawlers** tab, go to the list of AI crawlers.
+
+  3. Review key information such as:
+
+     * Bot operator
+     * Number of requests sent by the AI crawler
+     * Whether the AI crawler is allowed according to your `robots.txt`, or the number of times the AI crawler has violated your `robots.txt`.
+
+  4. From the **Block** column, toggle the switch for AI crawlers you wish to block.
+
+For more information, refer to [Manage AI crawlers](https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/).
+
+You can also create more complex rules when taking action on AI crawlers, using [Cloudflare WAF](https://developers.cloudflare.com/waf/). For more information on creating more specific rules, refer to [Create a custom rule in the dashboard](https://developers.cloudflare.com/waf/custom-rules/create-dashboard/).
+
+## 2. Review detected AI crawlers
+
+* All plans
+
+  Review the AI crawlers detected on your site.
+
+  1. Go to **AI Audit**.
+  2. From the **Metrics** tab, view key metrics on AI crawlers.
+
+Note that on free plans, the **Metrics** tab only displays metrics for the past 24 hours.
+
+## Plan comparison
+
+| All plans | Enterprise plans with Bot Management |
+| - | - |
+| AI crawler detection via [user agent strings](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/User-Agent) | Advanced AI crawler detection via [Bot Management detection ID](https://developers.cloudflare.com/bots/reference/bot-management-variables/#ruleset-engine-fields) |
+| Maximum 24-hour analytics window | Configurable analytics timeframes |
+| Allow/block controls | Allow/block controls, and the ability to charge AI crawlers using [pay per crawl](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/) |
+
+## Next steps
+
+* [Manage AI crawlers](https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/) with granular allow/block controls.
+* [Analyze AI traffic](https://developers.cloudflare.com/ai-audit/features/analyze-ai-traffic/) to understand crawler patterns and content popularity.
+* [Explore pay per crawl](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/) to test content monetization options (private beta).
+
+## Related resources
+
+Refer to the following related resources:
+
+* Cloudflare blog: [Start auditing and controlling the AI models accessing your content](https://blog.cloudflare.com/nl-nl/cloudflare-ai-audit-control-ai-content-crawlers/)
+* Block AI crawlers that do not adhere to recommended guidelines using [Cloudflare AI Labyrinth](https://developers.cloudflare.com/bots/additional-configurations/ai-labyrinth/).
+* [Direct AI crawlers with managed robots.txt](https://developers.cloudflare.com/bots/additional-configurations/managed-robots-txt/).
+
+</page>
+
+<page>
+---
+title: Reference · AI Audit
+lastUpdated: 2025-07-01T10:00:21.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/reference/
+  md: https://developers.cloudflare.com/ai-audit/reference/index.md
+---
+
+* [FAQs](https://developers.cloudflare.com/ai-audit/reference/faq/)
+* [Glossary](https://developers.cloudflare.com/ai-audit/reference/glossary/)
+
+</page>
+
+<page>
+---
+title: AI Audit with Cloudflare Bots · AI Audit
+description: AI Audit works alongside other Cloudflare products, such as
+  Cloudflare bot solutions. Bot solutions identifies traffic matching patterns
+  of known bots, and can challenge or block the bots as you wish.
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/configuration/ai-audit-with-bots/
+  md: https://developers.cloudflare.com/ai-audit/configuration/ai-audit-with-bots/index.md
+---
+
+AI Audit works alongside other Cloudflare products, such as Cloudflare [bot solutions](https://developers.cloudflare.com/bots/). Bot solutions identifies traffic matching patterns of known bots, and can challenge or block the bots as you wish.
+
+## Order of precedence
+
+* AI Audit's AI crawler blocking uses [WAF custom rules](https://developers.cloudflare.com/waf/custom-rules/), which take place before Cloudflare bot solutions.
+* AI Audit's pay per crawl takes place after Cloudflare bot solutions.
+
+```mermaid
+graph LR
+A[Traffic] --> B[WAF custom rules<br>AI Audit: Crawler blocks]
+B --> C[Cloudflare<br>Bot Solutions]
+C --> D[AI Audit:<br>Pay Per Crawl]
+classDef highlight fill:#F6821F,color:white
+```
+
+For more information on how Cloudflare bot solutions works with WAF custom rules, refer to [How it works](https://developers.cloudflare.com/bots/concepts/bot/#how-it-works).
+
+## Examples
+
+Consider the following examples.
+
+### Bot rule which blocks all AI bots vs pay per crawl
+
+You may have both of the following enabled:
+
+* A selection of AI crawlers to be charged through AI Audit's pay per crawl
+* Bot configuration option to [Block AI Bots](https://developers.cloudflare.com/bots/get-started/bot-fight-mode/#block-ai-bots).
+
+Since pay per crawl happens after bot solutions, you need to first turn off **Block AI Bots** to ensure pay per crawl works as intended.
+
+</page>
+
+<page>
+---
+title: AI Audit with Cloudflare WAF · AI Audit
+description: AI Audit works alongside other Cloudflare products, such as
+  Cloudflare Web Application Firewall (WAF). WAF checks incoming web and API
+  requests, and filters undesired traffic based on rules. WAF custom rules allow
+  you to perform certain actions such as enforcing robots.txt.
+lastUpdated: 2025-07-21T14:36:56.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/configuration/ai-audit-with-waf/
+  md: https://developers.cloudflare.com/ai-audit/configuration/ai-audit-with-waf/index.md
+---
+
+AI Audit works alongside other Cloudflare products, such as Cloudflare [Web Application Firewall (WAF)](https://developers.cloudflare.com/waf/). WAF checks incoming web and API requests, and filters undesired traffic based on rules. [WAF custom rules](https://developers.cloudflare.com/waf/custom-rules/) allow you to perform certain actions such as enforcing `robots.txt`.
+
+## Order of precedence
+
+* AI Audit uses WAF custom rules to block the selection of AI crawlers the site owner has decided to block.
+* AI Audit's pay per crawl feature takes place after WAF.
+
+```mermaid
+graph LR
+A[Traffic] --> B[WAF custom rules<br>AI Audit: Crawler blocks]
+B --> C[Cloudflare<br>Bot Solutions]
+C --> D[AI Audit:<br>Pay Per Crawl]
+classDef highlight fill:#F6821F,color:white
+```
+
+For this reason, if you plan on using AI Audit to manage AI crawlers, you may wish to modify your existing WAF custom rules such that it does not affect AI crawlers. This will allow you to manage AI crawlers only from AI Audit, thereby streamlining your workflow.
+
+How AI Audit uses WAF custom rules
+
+When you block AI crawlers via AI Audit (either all or some), you are using **one** WAF custom rule to block those AI crawlers.
+
+If you choose to allow all AI crawlers, AI Audit does not utilize any WAF custom rules.
+
+Depending on the type of account you have, you may have a limited number of WAF custom rules.
+
+## Examples of using WAF vs AI Audit
+
+Consider the following examples.
+
+### Traffic from a restricted country vs pay per crawl
+
+You may have both of the following features enabled:
+
+* [WAF custom rule to block traffic from specific countries](https://developers.cloudflare.com/waf/custom-rules/use-cases/block-traffic-from-specific-countries/)
+* AI Audit's [pay per crawl](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/) to charge AI crawlers when they request access to your content
+
+Since WAF custom rules are enforced before pay per crawl, traffic (including AI crawlers) from your blocked countries will continue to be blocked, even if they provide the [required headers](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/crawl-pages/#1-include-required-headers) for pay per crawl.
+
+### Allowed search engine bots via WAF custom rule vs pay per crawl
+
+You may have both of the following features enabled:
+
+* [WAF custom rule to allow search engine bots](https://developers.cloudflare.com/waf/custom-rules/use-cases/allow-traffic-from-verified-bots/)
+* AI Audit's [pay per crawl](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/) to charge all AI crawlers when they request access to your content (including search engine bots).
+
+Since custom rules are enforced before pay per crawl:
+
+* Only search engine bots will be able to access your site (enforced by custom rule).
+* The search engine bots will then be charged for access to your content (enforced by AI Audit's pay per crawl).
+
+Note
+
+This example only serves to highlight the order of precedence between WAF and AI Audit.
+
+Practically, it may be beneficial to allow well-behaved search engine bots to access your content to ensure your content is indexed.
+
+### Conflict in AI crawler blocking logic
+
+You may have both of the following features enabled:
+
+* A WAF custom rule which blocks all bots.
+* AI Audit selection which allows certain AI crawlers.
+
+In this scenario, you have two custom rules, each directing a different logic for handling AI crawlers. To resolve this issue:
+
+* Old dashboard
+
+  1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+  2. Go to **Security** > **WAF** > **Custom rules** tab.
+  3. Identify your WAF custom rule and the AI Audit rule.
+  4. Drag the rule you wish to prioritize to the top, or modify your WAF custom rule to ensure it does not conflict with your AI Audit configurations.
+
+* New dashboard
+
+  1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+  2. Go to **Security** > **Security rules** and filter by **Custom rules**.
+  3. Identify your custom rule and the AI Audit rule.
+  4. Drag the rule you wish to prioritize to the top, or modify your custom rule to ensure it does not conflict with your AI Audit configurations.
+
+</page>
+
+<page>
+---
+title: Analyze AI traffic · AI Audit
+description: AI Audit metrics provide you with insight on how AI crawlers are
+  interacting with your website (Cloudflare zone).
+lastUpdated: 2025-07-29T08:36:09.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/analyze-ai-traffic/
+  md: https://developers.cloudflare.com/ai-audit/features/analyze-ai-traffic/index.md
+---
+
+AI Audit metrics provide you with insight on how AI crawlers are interacting with your website ([Cloudflare zone](https://developers.cloudflare.com/fundamentals/concepts/accounts-and-zones/#zones)).
+
+To view AI Audit metrics:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **AI Audit**.
+
+You can find meaningful information across both **AI Crawlers** and **Metrics** tabs.
+
+## View AI crawler activity
+
+The **AI Crawlers** tab provides you with the following information:
+
+* Complete list of detected AI crawlers and their operators
+* Number of requests made by each AI crawler
+* Number of `robots.txt` violations for each crawler
+
+## View AI Audit metrics
+
+The **Metrics** tab provides you with the following metrics to help you understand how AI crawlers are interacting with your website.
+
+| Metric | Description |
+| - | - |
+| Total requests | The total number of requests to crawl your website, from all AI crawlers |
+| Blocked requests | The number of requests you have blocked (by blocking AI crawlers) |
+| Allowed requests | The number of requests you have allowed (by allowing AI crawlers) |
+| Hosts | The owner of the AI crawler |
+| Overall popular paths | The most popular pages crawled by AI crawlers, from all AI crawlers |
+| Most active AI crawlers by operators | The AI crawler owners with the highest number of requests to access your site |
+| Request by AI crawlers | A graph which displays the number of crawl requests from each AI crawler |
+| Most popular paths by AI crawlers | The most popular pages crawled by AI crawlers, for each AI crawler |
+| Referrals | A graph which displays the number of referrals from each AI operator |
+| Referers | The list of referers who directed traffic to your site |
+
+Requests in AI Audit metrics
+
+The number of requests in AI Audit metrics are specifically requests which were met with HTTP code 200 (the request was successfully served, with actual content).
+
+AI Audit metrics filter all other HTTP codes.
+
+## Filter date range
+
+You can use the date filter to choose the period of time you wish to analyze.
+
+* Free plans
+
+  Filter options:
+
+  * Past 24 hours
+
+* Paid plans
+
+  Filter options:
+
+  * Past 24 hours
+  * Past 7 days
+  * Past 14 days
+  * Past month
+
+The values of the AI Audit metrics will update according to your filter.
+
+</page>
+
+<page>
+---
+title: Manage AI crawlers · AI Audit
+description: AI Audit enables you to take specific action for each AI crawler.
+lastUpdated: 2025-07-29T08:36:09.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/
+  md: https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/index.md
+---
+
+AI Audit enables you to take specific action for each AI crawler.
+
+To manage AI crawlers:
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **AI Audit**.
+3. Go to the **AI Crawlers** tab.
+
+## Review AI crawler activity
+
+The **AI Crawlers** tab displays a table of AI crawlers that are requesting access to your content, and how they interact with your pages. The table provides the following information.
+
+* Free plan
+
+  | Column | Details |
+  | - | - |
+  | AI Crawlers | The name of the AI crawler. |
+  | Operator | The name of the entity who owns the AI crawler. Note that an operator may have multiple AI crawlers. |
+  | Category | The category of the AI crawler. Refer to [Verified bot categories](https://developers.cloudflare.com/bots/concepts/bot/verified-bots/categories/). |
+  | Block | Toggle for blocking specific AI crawlers. |
+
+* Paid plan
+
+  | Column | Details |
+  | - | - |
+  | AI Crawlers | The name of the AI crawler. |
+  | Operator | The name of the entity who owns the AI crawler. Note that an operator may have multiple AI crawlers. |
+  | Category | The category of the AI crawler. Refer to [Verified bot categories](https://developers.cloudflare.com/bots/concepts/bot/verified-bots/categories/). |
+  | Requests | The number of times the AI crawler has requested to crawl your content. |
+  | Robots.txt violations | The number of times the AI crawler has violated your `robots.txt` file. |
+  | Action | The action you wish to take for the AI crawler. Refer to [Take action for each AI crawler](https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/#take-action-for-each-ai-crawler). |
+
+Quality of AI crawler detection
+
+On the free plan, AI Audit identifies AI crawlers based on their [user agent strings](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/User-Agent). This enables AI Audit to detect easy-to-detect (well-known) AI crawlers.
+
+Upgrade your plan to enable a more thorough detection using Cloudflare's [Bot Management detection ID](https://developers.cloudflare.com/bots/reference/bot-management-variables/#ruleset-engine-fields) field.
+
+### Filter AI crawler data
+
+You can use filters to narrow the scope of your result:
+
+* **Name:** Search the name of the AI crawler.
+* **Operator:** Filter by the AI crawler operator.
+* **Category:** Filter by the category of the AI crawler (for example, AI crawler, AI assistant, or archiver).
+
+The values of the table will update according to your filter.
+
+## Take action for each AI crawler
+
+* With pay per crawl
+
+  Pay per crawl closed beta
+
+  Pay per crawl is currently in closed beta.
+
+  To find out how to join the beta program, reach out to us at [Pay per crawl signup](http://www.cloudflare.com/paypercrawl-signup/), or contact your account executive if you are an existing Enterprise customer.
+
+  To learn more about pay per crawl, refer to Cloudflare blog: [Introducing pay per crawl: enabling content owners to charge AI crawlers for access](https://blog.cloudflare.com/introducing-pay-per-crawl/).
+
+  For each AI crawler, you can take one of three actions: allow, charge, or block.
+
+  Allow access
+
+  * **Summary:** You can allow an AI crawler to scrape your content.
+  * **When to use:** Allow AI crawlers that offer services which provide value through citations, referrals, or existing agreements.
+  * **Implementation:** From the **Actions** column, select **Allow**. Note that you can still choose to [Enforce `robots.txt`](https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/#take-action-for-each-ai-crawler).
+
+  For more details on how this rule interacts with other Cloudflare settings, refer to [How it works](https://developers.cloudflare.com/bots/concepts/bot/#how-it-works).
+
+  Block access
+
+  * **Summary:** You can block an AI crawler to completely stop the AI crawler from scraping your webpage.
+  * **When to use:** Block AI crawlers when their behavior do not align with your content strategy, or violate your policies.
+  * **Implementation:** From the **Actions** column, select **Block**.
+
+  Charge for crawl (private beta)
+
+  * **Summary:** You can charge the owner of the AI crawler for each crawl request.
+  * **When to use:** Charge AI crawlers when your content has training value, and you want to explore monetization options
+  * **Implementation:** From the **Actions** column, select **Charge**.
+
+  For more information, refer to [What is Pay Per Crawl?](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/).
+
+* Without pay per crawl
+
+  For each AI crawler, you can choose to allow or block access.
+
+  Allow access
+
+  * **Summary:** You can allow an AI crawler to scrape your content.
+  * **When to use:** Allow AI crawlers that offer services which provide value through citations, referrals, or existing agreements.
+  * **Implementation:** From the **Actions** column, select **Allow**. Note that you can still choose to [Enforce `robots.txt`](https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/#take-action-for-each-ai-crawler).
+
+  Block access
+
+  * **Summary:** You can block an AI crawler to completely stop the AI crawler from scraping your webpage.
+  * **When to use:** Block AI crawlers when their behavior do not align with your content strategy, or violate your policies.
+  * **Implementation:** From the **Actions** column, select **Block**.
+
+## Related resources
+
+* Use [pay per crawl](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/) to charge AI crawlers every time they access your content.
+
+</page>
+
+<page>
+---
+title: Pay Per Crawl · AI Audit
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/index.md
+---
+
+* [What is Pay Per Crawl?](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/)
+* [Use pay per crawl as a site owner](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/)
+* [Use pay per crawl as an AI owner](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/)
+
+</page>
+
+<page>
+---
+title: FAQs · AI Audit
+description: No. Pay per crawl allows setting different configurations (Block,
+  Charge, or Allow) for each crawler, but it only supports setting a single
+  price for all crawlers set to "Charge".
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/reference/faq/
+  md: https://developers.cloudflare.com/ai-audit/reference/faq/index.md
+---
+
+## Frequently asked questions - site owners
+
+### Can I charge a different price for each AI crawlers?
+
+No. Pay per crawl allows setting different configurations (Block, Charge, or Allow) for each crawler, but it only supports setting a single price for all crawlers set to "Charge".
+
+## Frequently asked questions - bot owners
+
+### Will I be charged multiple times if re-crawling the same page?
+
+Every time your AI crawler accesses content in a website protected with pay per crawl, it will incur a cost, as set by the site owner. You must implement mechanisms within your crawler to track its expenditure and to enforce any desired spending limits you wish to set.
+
+### Will I be billed for error HTTP status codes?
+
+No. Charging events are only issued on successful HTTP response codes. Errors are not billed, even if you have sent the `crawler-exact-price` header or the `crawler-max-price` header.
+
+### Do I need to use a specific user agent?
+
+You should use the normal user agents associated with your AI crawler that you have onboarded to Cloudflare and identified using Web Bot Auth.
+
+</page>
+
+<page>
+---
+title: Glossary · AI Audit
+description: Review the definitions for terms used across Cloudflare's AI Audit
+  documentation.
+lastUpdated: 2025-07-01T10:00:21.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/reference/glossary/
+  md: https://developers.cloudflare.com/ai-audit/reference/glossary/index.md
+---
+
+Review the definitions for terms used across Cloudflare's AI Audit documentation.
+
+| Term | Definition |
+| - | - |
+| AI crawler | A bot which scrapes content from websites in support of an AI model, including by scraping content for indexing, retrieval augmented generation, or training. |
+| Merchant of Record | The entity who facilitates "buying and selling". For pay per crawl, Cloudflare is the merchant of record. |
+| robots.txt | A text file which lists pages in your website that are off-limits for bots. Well-behaved bots respect this file, but some bots may violate it. You can enforce `robots.txt` with Cloudflare WAF custom rules. |
+
+</page>
+
+<page>
+---
+title: Use pay per crawl as an AI owner · AI Audit
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/index.md
+---
+
+* [Set up your account](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/set-up-cloudflare-account/)
+* [Connect Stripe](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/connect-to-stripe/)
+* [Verify your AI crawler](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/verify-ai-crawler/)
+* [Crawl pages](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/crawl-pages/)
+
+</page>
+
+<page>
+---
+title: Use pay per crawl as a site owner · AI Audit
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: true
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/index.md
+---
+
+* [Set up your account](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/set-up-cloudflare-account/)
+* [Connect Stripe](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/connect-to-stripe/)
+* [Set a pay per crawl price](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/set-a-pay-per-crawl-price/)
+* [Select AI crawlers to charge](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/select-crawlers-to-charge/)
+* [Monitor metrics](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/monitor-metrics/)
+
+</page>
+
+<page>
+---
+title: What is Pay Per Crawl? · AI Audit
+description: AI crawlers often consume vast amounts of web content. Some provide
+  mutual benefit to content owners by indexing content for search engines, but
+  others engage in activities such as content scraping without permission.
+lastUpdated: 2025-07-02T15:02:27.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/index.md
+---
+
+Pay per crawl closed beta
+
+Pay per crawl is currently in closed beta.
+
+To find out how to join the beta program, reach out to us at [Pay per crawl signup](http://www.cloudflare.com/paypercrawl-signup/), or contact your account executive if you are an existing Enterprise customer.
+
+To learn more about pay per crawl, refer to Cloudflare blog: [Introducing pay per crawl: enabling content owners to charge AI crawlers for access](https://blog.cloudflare.com/introducing-pay-per-crawl/).
+
+AI crawlers often consume vast amounts of web content. Some provide mutual benefit to content owners by indexing content for search engines, but others engage in activities such as content scraping without permission.
+
+The resulting landscape leaves content owners with limited options for managing AI crawlers or receiving compensation for automated access to their intellectual property.
+
+## What is Pay Per Crawl?
+
+Pay per crawl is a feature of AI Audit that enables site owners to control and monetize AI crawler access to content by setting a price per zone.
+
+Each time an AI crawler requests content, they either present payment intent via request headers for successful `HTTP 200` access, or receive an `HTTP 402 Payment Required` response with pricing. Cloudflare acts as the Merchant of Record for pay per crawl and also provides the underlying technical infrastructure.
+
+Note
+
+If you block an AI crawler from a zone via either of Cloudflare's [WAF](https://developers.cloudflare.com/waf/) or [Bot Management](https://developers.cloudflare.com/bots/get-started/bot-management/) products, those products' rulesets will override pay per crawl's "charge" feature, and the blocked crawler will not have access to the zone.
+
+Ultimately, pay per crawl enables:
+
+* Site owners to take control of their content, and charge a fee every time an AI crawler accesses a page in their [Cloudflare zone](https://developers.cloudflare.com/fundamentals/concepts/accounts-and-zones/#zones). For more details, refer to [use pay per crawl as a site owner](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/).
+* AI crawler owners to pay to access content on sites protected by pay per crawl. For more details, refer to [use pay per crawl as an AI owner](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/).
+
+![Pay per crawl components](https://developers.cloudflare.com/_astro/ai-audit-pay-per-crawl-diagram.51Dvd0Od_hg63.webp)
+
+## Additional resources
+
+Refer to the following resources.
+
+* [Use pay per crawl as a site owner](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/set-up-cloudflare-account/).
+* [Use pay per crawl as an AI owner](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/set-up-cloudflare-account/).
+* [AI Audit with Cloudflare WAF](https://developers.cloudflare.com/ai-audit/configuration/ai-audit-with-waf/).
+* [AI Audit with Cloudflare Bots](https://developers.cloudflare.com/ai-audit/configuration/ai-audit-with-bots/).
+
+</page>
+
+<page>
+---
+title: Connect Stripe · AI Audit
+description: Connect your Cloudflare account to Stripe to process payments. Pay
+  per crawl uses Stripe to process payments between AI crawler owners and site
+  owners.
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/connect-to-stripe/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/connect-to-stripe/index.md
+---
+
+```mermaid
+graph LR
+A[Set up your<br>Cloudflare Account] --> B[Connect to<br>Stripe]:::highlight
+B --> C[Verify your<br>AI crawler]
+C --> D[Crawl pages]
+classDef highlight fill:#F6821F,color:white
+```
+
+Connect your Cloudflare account to Stripe to process payments. Pay per crawl uses Stripe to process payments between AI crawler owners and site owners.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account.
+
+2. Go to **Manage Account** > **Configurations**.
+
+3. Go to the **Pay Per Crawl** tab.
+
+4. From **Connect to Stripe**, select **Connect**.
+
+5. Select **Continue to Stripe**.
+
+6. Follow the on-screen instructions to connect your Cloudflare account to a Stripe account.
+
+   Use a non-personal email address
+
+   Cloudflare recommends using a dedicated email to manage your pay per crawl account (for example, `aicrawler@company.com`).
+
+When you successfully connect Stripe to your account, you will see a green tick ✅ next to **Stripe connection**.
+
+Spending limits
+
+Cloudflare is not responsible for configuring spending limits. Ensure you have configured a maximum spending limit on your AI crawler.
+
+## Billing
+
+Charges are recorded upon successful delivery of content that is requested with valid [crawler price headers](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/crawl-pages/#22-include-payment-headers).
+
+Invoices are created and managed via Stripe. Crawlers are responsible for setting and enforcing their own spending limits.
+
+</page>
+
+<page>
+---
+title: Crawl pages · AI Audit
+description: Once your AI crawler complies with Web Bot Auth, you can begin to
+  crawl webpages. For more information on how pay per crawl works, refer to What
+  is Pay Per Crawl?
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/crawl-pages/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/crawl-pages/index.md
+---
+
+```mermaid
+graph LR
+A[Set up your<br>Cloudflare Account] --> B[Connect to<br>Stripe]
+B --> C[Verify your<br>AI crawler]
+C --> D[Crawl pages]:::highlight
+classDef highlight fill:#F6821F,color:white
+```
+
+Once your AI crawler complies with Web Bot Auth, you can begin to crawl webpages. For more information on how pay per crawl works, refer to [What is Pay Per Crawl?](https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/what-is-pay-per-crawl/)
+
+## 1. Identify payment requirements
+
+When an AI crawler makes a request to a page protected by pay per crawl, the server will respond with `HTTP/2 402 Payment Required`. This response will also include the `crawler-price` header which specifies the cost to access the content. For example, a response may look like the following:
+
+```txt
+HTTP/2 200
+date: Fri, 06 Jun 2025 08:42:38 GMT
+crawler-charged: USD 0.01
+```
+
+To access this content, the AI crawler must provide headers for paid access.
+
+## 2. Access paid content
+
+### 2.1. Include WBA headers
+
+Include Web Bot Auth headers by following the steps [Sign your requests](https://developers.cloudflare.com/bots/concepts/bot/verified-bots/web-bot-auth/#4-after-verification-sign-your-requests)
+
+### 2.2. Include payment headers
+
+Your AI crawler can specify the price it is willing to pay by providing one of two headers:
+
+* `crawler-exact-price`: This is the exact price the AI crawler is configured to pay for access. This value should exactly match the price set in the response header `crawler-price`. Include this header in your second request if your AI crawler first received a HTTP status code 402, and you wish to access the content by paying the `crawler-price`.
+* `crawler-max-price`: This is the maximum price the AI crawler is configured to pay for access on any content. Use this option if you wish to access any pay per crawl content with a crawl price equal or lower than the maximum price. If a page's `crawler-price` is higher than your `crawler-max-price`, your AI crawler will receive a HTTP 402 response.
+
+Note
+
+Note that if a content owner has explicitly blocked your AI crawler (instead of charging your crawler), you cannot access their content, even if you provide `crawler-exact-price` or `crawler-max-price` headers.
+
+### 2.3. Review response headers
+
+When you specify a header to indicate payment, you may receive one of two responses:
+
+#### Successful HTTP/2 200 response
+
+The value of the `crawler-charged` header indicates the exact amount that will be billed to your Cloudflare account for the request.
+
+```txt
+HTTP/2 200
+date: Fri, 06 Jun 2025 08:42:38 GMT
+crawler-charged: USD 0.01
+```
+
+#### Unsuccessful HTTP/2 402 response
+
+If the request is unsuccessful due to an incorrect price header, you will receive a response with the `crawler-price` header. Your request header values must be adjusted to match the `crawler-price`.
+
+```txt
+HTTP/2 402
+date: Fri, 06 Jun 2025 08:42:38 GMT
+content-type: text/plain; charset=utf-8
+crawler-price: USD 0.01
+```
+
+## 3. Track your spending
+
+When you successfully access pay per crawl content (response with HTTP status code 200), the response will include `crawler-charged`. For example:
+
+```plaintext
+crawler-charged: USD 0.01
+```
+
+Cloudflare strongly recommends tracking and saving these values to keep an accurate record of the bill your AI crawler has accrued.
+
+## Additional resources
+
+You may wish to refer to the following resources.
+
+* [AI Audit FAQs](https://developers.cloudflare.com/ai-audit/reference/faq/).
+
+</page>
+
+<page>
+---
+title: Set up your account · AI Audit
+description: To begin using pay per crawl, set up your Cloudflare account.
+lastUpdated: 2025-07-01T13:45:31.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/set-up-cloudflare-account/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/set-up-cloudflare-account/index.md
+---
+
+```mermaid
+graph LR
+A[Set up your<br>Cloudflare Account]:::highlight --> B[Connect to<br>Stripe]
+B --> C[Verify your<br>AI crawler]
+C --> D[Crawl pages]
+classDef highlight fill:#F6821F,color:white
+```
+
+To begin using pay per crawl, set up your Cloudflare account.
+
+Sign up for a [Cloudflare account](https://dash.cloudflare.com/sign-up).
+
+Pay per crawl closed beta
+
+Pay per crawl is currently in closed beta.
+
+To find out how to join the beta program, reach out to us at [Pay per crawl signup](http://www.cloudflare.com/paypercrawl-signup/), or contact your account executive if you are an existing Enterprise customer.
+
+To learn more about pay per crawl, refer to Cloudflare blog: [Introducing pay per crawl: enabling content owners to charge AI crawlers for access](https://blog.cloudflare.com/introducing-pay-per-crawl/).
+
+</page>
+
+<page>
+---
+title: Verify your AI crawler · AI Audit
+description: Once you have connected your Stripe account, set up your AI crawler
+  as a verified bot.
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/verify-ai-crawler/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-ai-owner/verify-ai-crawler/index.md
+---
+
+```mermaid
+graph LR
+A[Set up your<br>Cloudflare Account] --> B[Connect to<br>Stripe]
+B --> C[Verify your<br>AI crawler]:::highlight
+C --> D[Crawl pages]
+classDef highlight fill:#F6821F,color:white
+```
+
+Once you have connected your Stripe account, set up your AI crawler as a [verified bot](https://developers.cloudflare.com/bots/concepts/bot/#verified-bots).
+
+## Content access restriction
+
+When an AI crawler tries to access content protected by pay per crawl, it receives a HTTP status code 402. This indicates payment is required. The HTTP header of the response includes the cost of the content.
+
+For example, the response header may look like below:
+
+```plaintext
+HTTP/2 402
+date: Fri, 06 Jun 2025 08:42:38 GMT
+content-type: text/plain; charset=utf-8
+crawler-price: USD 0.01
+server: cloudflare
+```
+
+To access this content, you must verify your AI crawler.
+
+## 1. Follow Web Bot Auth protocol
+
+Ensure your AI crawler identifies itself with the required headers for Web Bot Auth.
+
+Follow the steps found in [Web Both Auth](https://developers.cloudflare.com/bots/concepts/bot/verified-bots/web-bot-auth/).
+
+## 2. Follow verified bot policy
+
+Ensure your AI crawler follows Cloudflare's [verified bots policy](https://developers.cloudflare.com/bots/concepts/bot/verified-bots/policy/).
+
+## 3. Submit verification request
+
+Submit a form to add your AI crawler to Cloudflare's list of verified bots.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account.
+2. Go to **Manage Account** > **Configurations**.
+3. Go to the **Verified Bots** tab.
+4. Fill out the form.
+5. Select **Submit**.
+
+</page>
+
+<page>
+---
+title: Connect Stripe · AI Audit
+description: Connect your Cloudflare account to Stripe to process payments. Pay
+  per crawl uses Stripe to process payments between AI crawler owners and site
+  owners.
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/connect-to-stripe/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/connect-to-stripe/index.md
+---
+
+```mermaid
+graph LR
+A[Set up your<br>Cloudflare Account] --> B[Connect to<br>Stripe]:::highlight
+B --> C[Set pay per<br>crawl price]
+C --> D[Select AI crawlers<br>to charge]
+D --> E[Monitor<br>metrics]
+classDef highlight fill:#F6821F,color:white
+```
+
+Connect your Cloudflare account to Stripe to process payments. Pay per crawl uses Stripe to process payments between AI crawler owners and site owners.
+
+1. Log in to the [Cloudflare dashboard](https://dash.cloudflare.com/), and select your account and domain.
+2. Go to **AI Audit**.
+3. Go to the **Settings** tab.
+4. Under **Pay Per Crawl**, select **Connect**.
+5. Select **Continue to Stripe**.
+6. Follow the on-screen instructions to connect your Cloudflare account to a Stripe account.
+
+When you successfully connect Stripe to your account, you will see a green tick ✅ next to **Stripe connection**.
+
+## Billing
+
+Cloudflare manages the billing lifecycle from charge initiation to payout.
+
+The billing workflow begins when an AI crawler indicates payment intent via request header. A charge event is recorded upon successful delivery of the requested content. Cloudflare subsequently aggregates and reconciles all recorded charges.
+
+Payouts are remitted to publishers in good standing on a monthly cycle and subject to a settlement period and payout threshold.
+
+</page>
+
+<page>
+---
+title: Monitor metrics · AI Audit
+description: Once you have confirmed the selection of AI crawlers to charge,
+  monitor key metrics to understand how AI crawlers are interacting with your
+  content.
+lastUpdated: 2025-07-29T08:36:09.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/monitor-metrics/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/monitor-metrics/index.md
+---
+
+```mermaid
+graph LR
+A[Set up your<br>Cloudflare Account] --> B[Connect to<br>Stripe]
+B --> C[Set pay per<br>crawl price]
+C --> D[Select AI crawlers<br>to charge]
+D --> E[Monitor<br>metrics]:::highlight
+classDef highlight fill:#F6821F,color:white
+```
+
+Once you have confirmed the selection of AI crawlers to charge, monitor key metrics to understand how AI crawlers are interacting with your content.
+
+1. Go to the **Metrics** tab.
+2. [View AI Audit metrics](https://developers.cloudflare.com/ai-audit/features/analyze-ai-traffic/#view-ai-audit-metrics). Understanding these metrics can help you better manage AI crawlers accessing your content.
+
+## Other considerations
+
+You may also wish to do the following:
+
+1. Update your `robots.txt` to clearly indicate which pages are off-limits, even if AI crawlers are willing to pay for the content.
+
+## Additional resources
+
+You may wish to refer to the following resources.
+
+* [AI Audit FAQs](https://developers.cloudflare.com/ai-audit/reference/faq/).
+
+</page>
+
+<page>
+---
+title: Select AI crawlers to charge · AI Audit
+description: Once you have set a pay per crawl price, AI Audit automatically
+  sets the default action for all applicable AI crawlers as Charge. However, you
+  can control which action to take for each AI crawler.
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/select-crawlers-to-charge/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/select-crawlers-to-charge/index.md
+---
+
+```mermaid
+graph LR
+A[Set up your<br>Cloudflare Account] --> B[Connect to<br>Stripe]
+B --> C[Set pay per<br>crawl price]
+C --> D[Select AI crawlers<br>to charge]:::highlight
+D --> E[Monitor<br>metrics]
+classDef highlight fill:#F6821F,color:white
+```
+
+Once you have set a pay per crawl price, AI Audit automatically sets the default action for all applicable AI crawlers as **Charge**. However, you can control which action to take for each AI crawler.
+
+1. Go to the **AI Crawlers** tab.
+2. Use the selection slider in the **Actions** column to configure the setting for each AI crawler.
+
+AI crawlers for which you select **Charge** will be prompted to pay your configured pay per crawl price each time they attempt to scrape content from a zone.
+
+Refer to [Manage AI crawlers](https://developers.cloudflare.com/ai-audit/features/manage-ai-crawlers/) for more information on how to manage AI crawlers.
+
+</page>
+
+<page>
+---
+title: Set a pay per crawl price · AI Audit
+description: Once you have connected your Stripe account, you can set your pay
+  per crawl price.
+lastUpdated: 2025-07-01T13:10:10.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/set-a-pay-per-crawl-price/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/set-a-pay-per-crawl-price/index.md
+---
+
+```mermaid
+graph LR
+A[Set up your<br>Cloudflare Account] --> B[Connect to<br>Stripe]
+B --> C[Set pay per<br>crawl price]:::highlight
+C --> D[Select AI crawlers<br>to charge]
+D --> E[Monitor<br>metrics]
+classDef highlight fill:#F6821F,color:white
+```
+
+Once you have connected your Stripe account, you can set your pay per crawl price.
+
+1. From the [Cloudflare dashboard](https://dash.cloudflare.com/), select your account and domain.
+2. Go to **AI Audit**.
+3. Go to the **Settings** tab.
+4. From **Pay Per Crawl**, select the **Edit** icon under **Pay Per Crawl price**.
+5. Enter the pay per crawl price you wish to set. Note that smallest unit of payment is 0.01 USD.
+6. Select **Save**.
+
+Note
+
+When you configure a pay per crawl price, AI Audit automatically sets the default action for all applicable AI crawlers as **Charge**.
+
+</page>
+
+<page>
+---
+title: Set up your account · AI Audit
+description: To begin using pay per crawl, set up your Cloudflare account.
+lastUpdated: 2025-07-01T13:45:31.000Z
+chatbotDeprioritize: false
+source_url:
+  html: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/set-up-cloudflare-account/
+  md: https://developers.cloudflare.com/ai-audit/features/pay-per-crawl/use-pay-per-crawl-as-site-owner/set-up-cloudflare-account/index.md
+---
+
+```mermaid
+graph LR
+A[Set up your<br>Cloudflare Account]:::highlight --> B[Connect to<br>Stripe]
+B --> C[Set pay per<br>crawl price]
+C --> D[Select AI crawlers<br>to charge]
+D --> E[Monitor<br>metrics]
+classDef highlight fill:#F6821F,color:white
+```
+
+To begin using pay per crawl, set up your Cloudflare account.
+
+## 1. Sign up to a Cloudflare account
+
+Sign up for a [Cloudflare account](https://dash.cloudflare.com/sign-up).
+
+## 2. Connect your domain to Cloudflare
+
+[Connect your domain](https://developers.cloudflare.com/fundamentals/manage-domains/add-site/) to Cloudflare. Domains you add to Cloudflare become [zones](https://developers.cloudflare.com/fundamentals/concepts/accounts-and-zones/#zones).
+
+AI Audit scopes pay per crawl to your zones.
+
+## 3. Proxy traffic through Cloudflare
+
+Make sure your domain is [proxying traffic through Cloudflare](https://developers.cloudflare.com/fundamentals/concepts/how-cloudflare-works/#cloudflare-as-a-reverse-proxy).
+
+Pay per crawl closed beta
+
+Pay per crawl is currently in closed beta.
+
+To find out how to join the beta program, reach out to us at [Pay per crawl signup](http://www.cloudflare.com/paypercrawl-signup/), or contact your account executive if you are an existing Enterprise customer.
+
+To learn more about pay per crawl, refer to Cloudflare blog: [Introducing pay per crawl: enabling content owners to charge AI crawlers for access](https://blog.cloudflare.com/introducing-pay-per-crawl/).
+
+</page>
