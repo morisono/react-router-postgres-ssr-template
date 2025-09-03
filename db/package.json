@@ -1,0 +1,12 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "main": "orm/examples.ts",
+  "devDependencies": {},
+  "scripts": {
+    "test": "npx drizzle-kit check"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

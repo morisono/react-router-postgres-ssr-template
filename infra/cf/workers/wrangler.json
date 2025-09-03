@@ -1,0 +1,25 @@
+{
+  "name": "cloudflare-worker",
+  "version": "1.0.0",
+  "description": "Cloudflare Worker for the application",
+  "main": "src/index.ts",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "compatibility_date": "2024-09-23",
+  "hyperdrive": [
+    {
+      "binding": "HYPERDRIVE",
+      "id": "<your-hyperdrive-id-here>"
+    }
+  ],
+  "env": {
+    "staging": {
+      "observability": {
+        "enabled": true,
+        "invocation_logs": true,
+        "head_sampling_rate": 1
+      }
+    }
+  }
+}

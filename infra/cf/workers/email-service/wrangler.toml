@@ -1,0 +1,17 @@
+name = "email-service-worker"
+main = "index.ts"
+compatibility_date = "2024-12-01"
+
+# Email bindings configuration
+[send_email]
+destination_addresses = ["test@example.com"]
+
+# Environment for production
+[env.production]
+[env.production.send_email]
+destination_addresses = ["your-email@domain.com"]
+
+# Environment for development
+[env.development]
+[env.development.send_email]
+destination_addresses = ["dev@example.com"]

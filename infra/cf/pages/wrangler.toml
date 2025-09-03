@@ -1,0 +1,13 @@
+name = "cloudflare-vite-get-started"
+compatibility_date = "2025-04-03"
+main = "./src/index.ts"
+
+[[services]]
+binding = "CONTACTMAIL"
+service = "contact@mori-and.com"
+environment = "production"
+
+[[env.production.services]]
+binding = "CONTACTMAIL"
+service = "contact@mori-and.com"
+environment = "production"

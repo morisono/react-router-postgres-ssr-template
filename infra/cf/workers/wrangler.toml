@@ -1,0 +1,91 @@
+name = "auth-system"
+main = "../../apps/backend/dist/worker.js"
+compatibility_date = "2025-07-05"
+compatibility_flags = ["nodejs_compat"]
+
+[env.development]
+name = "auth-system-dev"
+vars = { ENVIRONMENT = "development" }
+
+[env.staging]
+name = "auth-system-staging"
+vars = { ENVIRONMENT = "staging" }
+
+[env.production]
+name = "auth-system-prod"
+vars = { ENVIRONMENT = "production" }
+
+# KV Storage for sessions and cache
+[[kv_namespaces]]
+binding = "KV_SESSIONS"
+id = "sessions_kv_namespace"
+preview_id = "sessions_kv_preview"
+
+[[kv_namespaces]]
+binding = "KV_CACHE"
+id = "cache_kv_namespace"
+preview_id = "cache_kv_preview"
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "auth_database"
+database_id = "your_d1_database_id"
+
+# R2 Storage for file uploads
+[[r2_buckets]]
+binding = "R2_STORAGE"
+bucket_name = "auth-storage"
+preview_bucket_name = "auth-storage-preview"
+
+# Durable Objects for rate limiting
+[[durable_objects.bindings]]
+name = "RATE_LIMITER"
+class_name = "RateLimiter"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["RateLimiter"]
+
+# Security headers
+[env.production.vars]
+BETTER_AUTH_DOMAIN = "app.domain.com"
+FRONTEND_URL = "https://app.domain.com"
+SESSION_TIMEOUT = "900" # 15 minutes
+REFRESH_TOKEN_LIFETIME = "604800" # 7 days
+MFA_REQUIRED = "true"
+SECURITY_LEVEL = "high"
+
+[env.staging.vars]
+BETTER_AUTH_DOMAIN = "staging.app.domain.com"
+FRONTEND_URL = "https://staging.app.domain.com"
+SESSION_TIMEOUT = "1800" # 30 minutes
+REFRESH_TOKEN_LIFETIME = "86400" # 1 day
+MFA_REQUIRED = "false"
+SECURITY_LEVEL = "medium"
+
+[env.development.vars]
+BETTER_AUTH_DOMAIN = "localhost:5173"
+FRONTEND_URL = "http://localhost:5173"
+SESSION_TIMEOUT = "3600" # 1 hour
+REFRESH_TOKEN_LIFETIME = "86400" # 1 day
+MFA_REQUIRED = "false"
+SECURITY_LEVEL = "low"
+DEBUG_AUTH = "true"
+
+# Analytics and monitoring
+[[analytics_engine_datasets]]
+binding = "ANALYTICS"
+
+# AI for anomaly detection (optional)
+[ai]
+binding = "AI"
+
+
+[[hyperdrive]]
+binding = "HYPERDRIVE"
+id = "<your-hyperdrive-id-here>"
+
+[observability]
+  enabled = true
+  head_sampling_rate = 1
