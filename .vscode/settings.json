@@ -142,7 +142,7 @@
     "windsurf": true,
     "cursor-global": true,
     "cursor-workspace": true
-},
+  },
   "telemetry.telemetryLevel": "off",
   "telemetry.enableCrashReporter": false,
 "telemetry.enableTelemetry": false,
